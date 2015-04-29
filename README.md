@@ -14,7 +14,7 @@ R Package for synthesizing information across collaborating research
 
 [Will Beasley](https://www.researchgate.net/profile/William_Beasley2) ([University of Oklahoma Health Sciences Center](http://ouhsc.edu/), [Department of Pediatrics](https://www.oumedicine.com/pediatrics), [Biomedical & Behavioral Research Core](http://ouhsc.edu/BBMC/)), and
 
-[Andrey Koval](https://www.researchgate.net/profile/Andrey_Koval) [University of Victoria](http://www.uvic.ca/), [Department of Psychology](http://www.uvic.ca/socialsciences/psychology/).
+[Andrey Koval](https://www.researchgate.net/profile/Andrey_Koval) ([University of Victoria](http://www.uvic.ca/), [Department of Psychology](http://www.uvic.ca/socialsciences/psychology/)).
 
 ### Download and Installation Instructions
 <!--
