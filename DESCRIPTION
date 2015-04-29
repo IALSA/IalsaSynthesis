@@ -1,0 +1,11 @@
+Package: IalsaSynthesis
+Title: Synthesizing Information Across Collaborating Research
+Version: 0.0-1
+Date: 2015-04-29
+Authors@R: person("Will", "Beasley", , "wibeasley@hotmail.com", role = c("aut", "cre"))
+Author: Will Beasley [aut, cre]
+Maintainer: Will Beasley <wibeasley@hotmail.com> 
+Description: Data manipulation operations frequently used in OUHSC BBMC projects.
+Depends: R (>= 3.2.0)
+License: MIT + file LICENSE
+LazyData: true
