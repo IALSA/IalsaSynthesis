@@ -61,16 +61,33 @@ test_that("Path Data File", {
 test_that("AIC", {   
   tolerance <- 0.001
   expected_1 <- 22417.460
-#   expected_2 <- "C:\\Users\\Andrea Zammit\\Desktop\\EASMaster.csv"
-#   expected_3 <- "\"C:\\Users\\wuche\\Dropbox\\IALSA\\Data\\HABC-9999.dta.dat\"" #Notice this one has a fishy extension and enclosing quotes.
-
+  expected_2 <- 3616.701
+  expected_3 <- 40471.022
+  
   observed_from_snippet_1 <- IalsaSynthesis::extract_aic(snippet_fit_1)
   observed_from_file_1 <- IalsaSynthesis::extract_aic(output_1)
-#   observed_from_file_2 <- IalsaSynthesis::extract_aic(output_2)
-#   observed_from_file_3 <- IalsaSynthesis::extract_aic(output_3)
-#   
+  observed_from_file_2 <- IalsaSynthesis::extract_aic(output_2)
+  observed_from_file_3 <- IalsaSynthesis::extract_aic(output_3)
+  
   expect_equal(observed_from_snippet_1, expected_1, info="The data AIC extracted from the snippet should be correct.", tolerance=tolerance)
   expect_equal(observed_from_file_1, expected_1, info="The AIC extracted from the first output file should be correct.", tolerance=tolerance)
-#   expect_equal(observed_from_file_2, expected_2, info="The AIC extracted from the second output file should be correct.", tolerance=toleranc)
-#   expect_equal(observed_from_file_3, expected_3, info="The AIC extracted from the third output file should be correct.", tolerance=toleranc)
+  expect_equal(observed_from_file_2, expected_2, info="The AIC extracted from the second output file should be correct.", tolerance=tolerance)
+  expect_equal(observed_from_file_3, expected_3, info="The AIC extracted from the third output file should be correct.", tolerance=tolerance)
+})
+
+test_that("BIC", {   
+  tolerance <- 0.001
+  expected_1 <- 22526.536
+  expected_2 <- 3710.044
+  expected_3 <- 40566.198
+  
+  observed_from_snippet_1 <- IalsaSynthesis::extract_bic(snippet_fit_1)
+  observed_from_file_1 <- IalsaSynthesis::extract_bic(output_1)
+  observed_from_file_2 <- IalsaSynthesis::extract_bic(output_2)
+  observed_from_file_3 <- IalsaSynthesis::extract_bic(output_3)
+  
+  expect_equal(observed_from_snippet_1, expected_1, info="The data BIC extracted from the snippet should be correct.", tolerance=tolerance)
+  expect_equal(observed_from_file_1, expected_1, info="The BIC extracted from the first output file should be correct.", tolerance=tolerance)
+  expect_equal(observed_from_file_2, expected_2, info="The BIC extracted from the second output file should be correct.", tolerance=tolerance)
+  expect_equal(observed_from_file_3, expected_3, info="The BIC extracted from the third output file should be correct.", tolerance=tolerance)
 })
