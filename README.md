@@ -1,6 +1,8 @@
 <!-- rmarkdown v1 -->
 Travis-CI on Ubuntu 12.04 LTS: [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=master)](https://travis-ci.org/IALSA/IalsaSynthesis); AppVeyor on Windows Server 2012: [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/IALSA/IalsaSynthesis?branch=master)](https://ci.appveyor.com/project/IALSA/IalsaSynthesis).
 
+Coveralls: [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg)](https://coveralls.io/r/IALSA/IalsaSynthesis)
+
 IalsaSynthesis
 ====================
 
