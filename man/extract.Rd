@@ -2,6 +2,7 @@
 % Please edit documentation in R/extract.R
 \name{extract}
 \alias{extract}
+\alias{extract_aic}
 \alias{extract_output_filename}
 \title{Extract the values within model output files.}
 \usage{

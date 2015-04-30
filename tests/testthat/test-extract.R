@@ -15,14 +15,14 @@ test_that("Path Data File", {
   expected_3 <- "\"C:\\Users\\wuche\\Dropbox\\IALSA\\Data\\HABC-9999.dta.dat\"" #Notice this one has a fishy extension and enclosing quotes.
   
   snippet_1 <- "        TITLE: m5, b1,trails, peak flow, LGM,ae Conditional,female
-
-        DATA:  File = C:\\Users\\Dragon Hat\\Desktop\\CbaMaster.csv;
-
-
-        VARIABLE: Names are
-          ! demographics
-          SubjectID	Sex	Ethnic	Caus	DemEver	Bagesq	deathage	DEMO23	Educyrs	Status	"
-
+  
+  DATA:  File = C:\\Users\\Dragon Hat\\Desktop\\CbaMaster.csv;
+  
+  
+  VARIABLE: Names are
+  ! demographics
+  SubjectID	Sex	Ethnic	Caus	DemEver	Bagesq	deathage	DEMO23	Educyrs	Status	"
+  
   observed_from_snippet_1 <- IalsaSynthesis::extract_output_filename(snippet_1)
   observed_from_file_1 <- IalsaSynthesis::extract_output_filename(output_1)
   observed_from_file_2 <- IalsaSynthesis::extract_output_filename(output_2)
@@ -32,4 +32,50 @@ test_that("Path Data File", {
   expect_equal(observed_from_file_1, expected_1, "The data file path extracted from the first output file should be correct.")
   expect_equal(observed_from_file_2, expected_2, "The data file path extracted from the second output file should be correct.")
   expect_equal(observed_from_file_3, expected_3, "The data file path extracted from the third output file should be correct.")
+})
+
+test_that("AIC", {   
+  expected_1 <- 22417.460
+#   expected_2 <- "C:\\Users\\Andrea Zammit\\Desktop\\EASMaster.csv"
+#   expected_3 <- "\"C:\\Users\\wuche\\Dropbox\\IALSA\\Data\\HABC-9999.dta.dat\"" #Notice this one has a fishy extension and enclosing quotes.
+  
+  snippet_1 <- "
+
+  MODEL FIT INFORMATION
+  
+  Number of Free Parameters                       25
+  
+  Loglikelihood
+  
+  H0 Value                      -11183.730
+  
+  Information Criteria
+  
+  Akaike (AIC)                   22417.460
+  Bayesian (BIC)                 22526.536
+  Sample-Size Adjusted BIC       22447.171
+  (n* = (n + 2) / 24)
+  
+  
+  
+  MODEL RESULTS
+  
+  Two-Tailed"
+  
+#   matches <- regexpr("Akaike \\(AIC\\)\\s+(.+)", snippet_1, perl=TRUE);
+#   result <- attr(matches, "capture.start")[,1]
+#   attr(result, "match.length") <- attr(matches, "capture.length")[,1]
+#   matched_string <- regmatches(snippet_1, result)
+#   observed_from_snippet_1 <- as.numeric(matched_string)
+#   message(observed_from_snippet_1)
+  
+  observed_from_snippet_1 <- IalsaSynthesis::extract_aic(snippet_1)
+#   observed_from_file_1 <- IalsaSynthesis::extract_output_filename(output_1)
+#   observed_from_file_2 <- IalsaSynthesis::extract_output_filename(output_2)
+#   observed_from_file_3 <- IalsaSynthesis::extract_output_filename(output_3)
+#   
+  expect_equal(observed_from_snippet_1, expected_1, "The data file path extracted from the snippet should be correct.")
+#   expect_equal(observed_from_file_1, expected_1, "The data file path extracted from the first output file should be correct.")
+#   expect_equal(observed_from_file_2, expected_2, "The data file path extracted from the second output file should be correct.")
+#   expect_equal(observed_from_file_3, expected_3, "The data file path extracted from the third output file should be correct.")
 })
