@@ -16,7 +16,12 @@
 #' library(IalsaSynthesis) #Load the package into the current R session.
 
 extract_output_filename <- function( mplus_output ) {
-  gsub(pattern="DATA:  File = (.+);", replacement="\\1", mplus_output, perl=T)
-  # gsub(pattern="DATA:  File = (.+);", replacement="\\1", mplus_output[output_line_of_path], perl=T)
+  # gsub(pattern="DATA:  File = (.+);", replacement="\\1", mplus_output, perl=T)
   
+  matches <- regexpr(".+DATA:  File = (.+);.*", mplus_output, perl=TRUE);
+  result <- attr(matches, "capture.start")[,1]
+  attr(result, "match.length") <- attr(matches, "capture.length")[,1]
+  observed_snippet <- regmatches(mplus_output, result)
+  
+  return( observed_snippet )
 }

@@ -15,8 +15,7 @@ A \code{numeric} value corresponding to the desired
 quantity.
 }
 \description{
-Functions that extract the values within model output
-files.
+Functions that extract the values within model output files.
 }
 \examples{
 library(IalsaSynthesis) #Load the package into the current R session.
