@@ -3,6 +3,7 @@
 \name{extract}
 \alias{extract}
 \alias{extract_aic}
+\alias{extract_bic}
 \alias{extract_output_filename}
 \title{Extract the values within model output files.}
 \usage{
