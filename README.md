@@ -1,7 +1,16 @@
 <!-- rmarkdown v1 -->
-Travis-CI on Ubuntu 12.04 LTS: [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=master)](https://travis-ci.org/IALSA/IalsaSynthesis); AppVeyor on Windows Server 2012: [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/IALSA/IalsaSynthesis?branch=master)](https://ci.appveyor.com/project/IALSA/IalsaSynthesis).
+|       | Master Branch | Dev Branch |
+| :---- | ------------- | ---------- |
+| Travis-CI on Ubuntu 12.04 LTS |  [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=master)](https://travis-ci.org/IALSA/IalsaSynthesis) | [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=dev)](https://travis-ci.org/IALSA/IalsaSynthesis) |
+| AppVeyor on Windows Server 2012 | [![Build status](https://ci.appveyor.com/api/projects/status/8u5m65k0rr2veahx?svg=true)](https://ci.appveyor.com/project/wibeasley/ialsasynthesis) | [![Build status](https://ci.appveyor.com/api/projects/status/8u5m65k0rr2veahx/branch/dev?svg=true)](https://ci.appveyor.com/project/wibeasley/ialsasynthesis/branch/dev) |
+| Coveralls | [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg?branch=master)](https://coveralls.io/r/IALSA/IalsaSynthesis?branch=master) | [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg?branch=dev)](https://coveralls.io/r/IALSA/IalsaSynthesis?branch=dev)|
 
-Coveralls: [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg)](https://coveralls.io/r/IALSA/IalsaSynthesis)
+
+| Branch | Travis-CI on Ubuntu 12.04 LTS | AppVeyor on Windows Server 2012 | Coveralls |
+| :----- | ----------------------------- | ------------------------------- | --------- |
+| Master |  [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=master)](https://travis-ci.org/IALSA/IalsaSynthesis) | [![Build status](https://ci.appveyor.com/api/projects/status/8u5m65k0rr2veahx?svg=true)](https://ci.appveyor.com/project/wibeasley/ialsasynthesis) | [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg?branch=master)](https://coveralls.io/r/IALSA/IalsaSynthesis?branch=master) |
+| Dev | [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=dev)](https://travis-ci.org/IALSA/IalsaSynthesis) | [![Build status](https://ci.appveyor.com/api/projects/status/8u5m65k0rr2veahx/branch/dev?svg=true)](https://ci.appveyor.com/project/wibeasley/ialsasynthesis/branch/dev) | [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg?branch=dev)](https://coveralls.io/r/IALSA/IalsaSynthesis?branch=dev) |
+
 
 IalsaSynthesis
 ====================
