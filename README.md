@@ -1,9 +1,10 @@
 <!-- rmarkdown v1 -->
 
-| Branch | [Travis-CI](https://travis-ci.org/IALSA/IalsaSynthesis/builds) (Ubuntu 12.04 LTS) | [AppVeyor](https://ci.appveyor.com/project/wibeasley/ialsasynthesis/history) (Windows Server 2012) | [Coveralls](https://coveralls.io/r/IALSA/IalsaSynthesis) | Zenodo |
+| Branch | [Travis-CI](https://travis-ci.org/IALSA/IalsaSynthesis/builds) | [AppVeyor](https://ci.appveyor.com/project/wibeasley/ialsasynthesis/history) | [Coveralls](https://coveralls.io/r/IALSA/IalsaSynthesis) | Zenodo |
 | :----- | :---------------------------: | :-----------------------------: | :-------: | :----: |
 | Master |  [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=master)](https://travis-ci.org/IALSA/IalsaSynthesis) | [![Build status](https://ci.appveyor.com/api/projects/status/8u5m65k0rr2veahx?svg=true)](https://ci.appveyor.com/project/wibeasley/ialsasynthesis) | [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg?branch=master)](https://coveralls.io/r/IALSA/IalsaSynthesis?branch=master) | -- |
 | Dev | [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=dev)](https://travis-ci.org/IALSA/IalsaSynthesis) | [![Build status](https://ci.appveyor.com/api/projects/status/8u5m65k0rr2veahx/branch/dev?svg=true)](https://ci.appveyor.com/project/wibeasley/ialsasynthesis/branch/dev) | [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg?branch=dev)](https://coveralls.io/r/IALSA/IalsaSynthesis?branch=dev) | -- |
+| | (Ubuntu 12.04 LTS) | (Windows Server 2012) | (Test Coverage) | (Independently-hosted Archive) |
 
 
 IalsaSynthesis
