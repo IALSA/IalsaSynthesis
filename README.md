@@ -1,6 +1,6 @@
 <!-- rmarkdown v1 -->
 
-| Branch | Travis-CI (Ubuntu 12.04 LTS) | AppVeyor (Windows Server 2012) | Coveralls | Zenodo |
+| Branch | [Travis-CI](https://travis-ci.org/IALSA/IalsaSynthesis/builds) (Ubuntu 12.04 LTS) | [AppVeyor](https://ci.appveyor.com/project/wibeasley/ialsasynthesis/history) (Windows Server 2012) | [Coveralls](https://coveralls.io/r/IALSA/IalsaSynthesis) | Zenodo |
 | :----- | :---------------------------: | :-----------------------------: | :-------: | :----: |
 | Master |  [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=master)](https://travis-ci.org/IALSA/IalsaSynthesis) | [![Build status](https://ci.appveyor.com/api/projects/status/8u5m65k0rr2veahx?svg=true)](https://ci.appveyor.com/project/wibeasley/ialsasynthesis) | [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg?branch=master)](https://coveralls.io/r/IALSA/IalsaSynthesis?branch=master) | -- |
 | Dev | [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=dev)](https://travis-ci.org/IALSA/IalsaSynthesis) | [![Build status](https://ci.appveyor.com/api/projects/status/8u5m65k0rr2veahx/branch/dev?svg=true)](https://ci.appveyor.com/project/wibeasley/ialsasynthesis/branch/dev) | [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg?branch=dev)](https://coveralls.io/r/IALSA/IalsaSynthesis?branch=dev) | -- |
@@ -9,17 +9,17 @@
 IalsaSynthesis
 ====================
 
-R Package for synthesizing information across collaborating research
+An [R](http://www.r-project.org/) Package for synthesizing information across collaborating research.
 
 [![IALSA Logo](http://www.ialsa.org/sites/default/files/logo_r_a.jpg)](http://www.ialsa.org/)
 
-[IALSA](http://www.ialsa.org/)(Integrative Analysis of Longitudinal Studies of Aging) research network unites approximately 100 longtidinal studies from all over the world.  IALSA makes primary use of a [coordinated analysis approach](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2773828/) and various [harmonization methods](https://www.maelstrom-research.org/repository/methods_library). Our projects involve dealing with multiple longitudinal studies, each of which may count numerous statistical models, making the synthesis of results particularly arduous. IalsaSynthesis packages offers software tools for extracting, pooling, evaluating, and reporting the results of a large number of statistical models. See out [flagship project](https://github.com/IALSA/IALSA-2015-Portland), stemming from coordinated analysis workshop in Portland in February of 2015.
+[IALSA](http://www.ialsa.org/) (Integrative Analysis of Longitudinal Studies of Aging) research network unites approximately 100 longtidinal studies from all over the world.  IALSA makes primary use of a [coordinated analysis approach](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2773828/) and various [harmonization methods](https://www.maelstrom-research.org/repository/methods_library). Our projects involve dealing with multiple longitudinal studies, each of which may count numerous statistical models, making the synthesis of results particularly arduous. The `IalsaSynthesis` package offers software tools for extracting, pooling, evaluating, and reporting the results of a large number of statistical models. See out [flagship project](https://github.com/IALSA/IALSA-2015-Portland), stemming from coordinated analysis workshop in Portland in February of 2015.
 
 ### Package Crew
 
-[Will Beasley](https://www.researchgate.net/profile/William_Beasley2) ([University of Oklahoma Health Sciences Center](http://ouhsc.edu/), [Department of Pediatrics](https://www.oumedicine.com/pediatrics), [Biomedical & Behavioral Research Core](http://ouhsc.edu/BBMC/)), and
+[Will Beasley](https://www.researchgate.net/profile/William_Beasley2) (*[University of Oklahoma Health Sciences Center](http://ouhsc.edu/), [Department of Pediatrics](https://www.oumedicine.com/pediatrics), [Biomedical & Behavioral Research Core](http://ouhsc.edu/BBMC/)*), and
 
-[Andrey Koval](https://www.researchgate.net/profile/Andrey_Koval) ([University of Victoria](http://www.uvic.ca/), [Department of Psychology](http://www.uvic.ca/socialsciences/psychology/)).
+[Andrey Koval](https://www.researchgate.net/profile/Andrey_Koval) (*[University of Victoria](http://www.uvic.ca/), [Department of Psychology](http://www.uvic.ca/socialsciences/psychology/)*).
 
 ### Download and Installation Instructions
 <!--
@@ -29,7 +29,7 @@ install.packages("IalsaSynthesis")
 ```
 -->
 
-The *development* version of `IalsaSynthesis` can be installed from [GitHub](https://github.com/IALSA/IalsaSynthesis) after installing the `devtools` package.  (The *release* version will be available on [CRAN](http://cran.rstudio.com/) closer to the Cambridge conference.)
+The *development* version of `IalsaSynthesis` can be installed from [GitHub](https://github.com/IALSA/IalsaSynthesis) after installing the `devtools` package.  (The *release* version will be available on [CRAN](http://cran.rstudio.com/) closer to the Cambridge conference in July 2015.)
 ```r
 install.packages("devtools")
 devtools::install_github(repo="IALSA/IalsaSynthesis")
