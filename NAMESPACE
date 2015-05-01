@@ -2,5 +2,8 @@
 
 export(extract_aic)
 export(extract_bic)
+export(extract_bic_adjusted)
+export(extract_free_parameter_count)
+export(extract_loglikelihood)
 export(extract_output_filename)
 export(validate_filename_output)

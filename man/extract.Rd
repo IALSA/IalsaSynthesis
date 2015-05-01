@@ -4,6 +4,9 @@
 \alias{extract}
 \alias{extract_aic}
 \alias{extract_bic}
+\alias{extract_bic_adjusted}
+\alias{extract_free_parameter_count}
+\alias{extract_loglikelihood}
 \alias{extract_output_filename}
 \title{Extract the values within model output files.}
 \usage{
