@@ -1,15 +1,9 @@
 <!-- rmarkdown v1 -->
-|       | Master Branch | Dev Branch |
-| :---- | ------------- | ---------- |
-| Travis-CI on Ubuntu 12.04 LTS |  [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=master)](https://travis-ci.org/IALSA/IalsaSynthesis) | [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=dev)](https://travis-ci.org/IALSA/IalsaSynthesis) |
-| AppVeyor on Windows Server 2012 | [![Build status](https://ci.appveyor.com/api/projects/status/8u5m65k0rr2veahx?svg=true)](https://ci.appveyor.com/project/wibeasley/ialsasynthesis) | [![Build status](https://ci.appveyor.com/api/projects/status/8u5m65k0rr2veahx/branch/dev?svg=true)](https://ci.appveyor.com/project/wibeasley/ialsasynthesis/branch/dev) |
-| Coveralls | [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg?branch=master)](https://coveralls.io/r/IALSA/IalsaSynthesis?branch=master) | [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg?branch=dev)](https://coveralls.io/r/IALSA/IalsaSynthesis?branch=dev)|
 
-
-| Branch | Travis-CI on Ubuntu 12.04 LTS | AppVeyor on Windows Server 2012 | Coveralls |
-| :----- | ----------------------------- | ------------------------------- | --------- |
-| Master |  [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=master)](https://travis-ci.org/IALSA/IalsaSynthesis) | [![Build status](https://ci.appveyor.com/api/projects/status/8u5m65k0rr2veahx?svg=true)](https://ci.appveyor.com/project/wibeasley/ialsasynthesis) | [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg?branch=master)](https://coveralls.io/r/IALSA/IalsaSynthesis?branch=master) |
-| Dev | [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=dev)](https://travis-ci.org/IALSA/IalsaSynthesis) | [![Build status](https://ci.appveyor.com/api/projects/status/8u5m65k0rr2veahx/branch/dev?svg=true)](https://ci.appveyor.com/project/wibeasley/ialsasynthesis/branch/dev) | [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg?branch=dev)](https://coveralls.io/r/IALSA/IalsaSynthesis?branch=dev) |
+| Branch | Travis-CI (Ubuntu 12.04 LTS) | AppVeyor (Windows Server 2012) | Coveralls | Zenodo |
+| :----- | :---------------------------: | :-----------------------------: | :-------: | :----: |
+| Master |  [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=master)](https://travis-ci.org/IALSA/IalsaSynthesis) | [![Build status](https://ci.appveyor.com/api/projects/status/8u5m65k0rr2veahx?svg=true)](https://ci.appveyor.com/project/wibeasley/ialsasynthesis) | [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg?branch=master)](https://coveralls.io/r/IALSA/IalsaSynthesis?branch=master) | -- |
+| Dev | [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=dev)](https://travis-ci.org/IALSA/IalsaSynthesis) | [![Build status](https://ci.appveyor.com/api/projects/status/8u5m65k0rr2veahx/branch/dev?svg=true)](https://ci.appveyor.com/project/wibeasley/ialsasynthesis/branch/dev) | [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg?branch=dev)](https://coveralls.io/r/IALSA/IalsaSynthesis?branch=dev) | -- |
 
 
 IalsaSynthesis
@@ -35,7 +29,7 @@ install.packages("IalsaSynthesis")
 ```
 -->
 
-The *development* version of `IalsaSynthesis` can be installed from [GitHub](https://github.com/IALSA/IalsaSynthesis) after installing the `devtools` package.
+The *development* version of `IalsaSynthesis` can be installed from [GitHub](https://github.com/IALSA/IalsaSynthesis) after installing the `devtools` package.  (The *release* version will be available on [CRAN](http://cran.rstudio.com/) closer to the Cambridge conference.)
 ```r
 install.packages("devtools")
 devtools::install_github(repo="IALSA/IalsaSynthesis")
