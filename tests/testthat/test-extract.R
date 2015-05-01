@@ -5,9 +5,9 @@ context("Extract")
 path_1 <- base::file.path(devtools::inst(name="IalsaSynthesis"), "test_data/2015-portland/b1_female_ae_muscle_fluid_grip_trailsb.out")
 path_2 <- base::file.path(devtools::inst(name="IalsaSynthesis"), "test_data/2015-portland/b1_male_aehplus_muscle_memory_grip_logicalmemory.out")
 path_3 <- base::file.path(devtools::inst(name="IalsaSynthesis"), "test_data/2015-portland/u1_male_aehplus_muscle_noCog_hand_noCogSpec.out")
-output_1 <- readLines(path_1)
-output_2 <- readLines(path_2)
-output_3 <- readLines(path_3)
+output_1 <- readr::read_file(path_1)
+output_2 <- readr::read_file(path_2)
+output_3 <- readr::read_file(path_3)
 
 
 snippet_fit_1 <- "
@@ -87,11 +87,27 @@ test_that("Loglikelihood", {
   observed_from_file_3 <- IalsaSynthesis::extract_loglikelihood(output_3)
   
   expect_equal(observed_from_snippet_1, expected_1, info="The free parameter count extracted from the snippet should be correct.", tolerance=tolerance)
-  expect_equal(observed_from_file_1, expected_1, info="The free parameter count extracted from the first output file should be correct.", tolerance=tolerance)
-  expect_equal(observed_from_file_2, expected_2, info="The free parameter count extracted from the second output file should be correct.", tolerance=tolerance)
-  expect_equal(observed_from_file_3, expected_3, info="The free parameter count extracted from the third output file should be correct.", tolerance=tolerance)
+  expect_equal(observed_from_file_1, expected_1, info="The loglikelihood extracted from the first output file should be correct.", tolerance=tolerance)
+  expect_equal(observed_from_file_2, expected_2, info="The loglikelihood extracted from the second output file should be correct.", tolerance=tolerance)
+  expect_equal(observed_from_file_3, expected_3, info="The loglikelihood extracted from the third output file should be correct.", tolerance=tolerance)
 })
 
+test_that("Scaling Correction Factor", {   
+  tolerance <- 0.001
+  # expected_1 <- NA_real_
+  # expected_2 <- NA_real_
+  expected_3 <- 1.3467
+  
+  observed_from_snippet_1 <- IalsaSynthesis::extract_scaling_correction(snippet_fit_1)
+  observed_from_file_1 <- IalsaSynthesis::extract_scaling_correction(output_1)
+  observed_from_file_2 <- IalsaSynthesis::extract_scaling_correction(output_2)
+  observed_from_file_3 <- IalsaSynthesis::extract_scaling_correction(output_3)
+  
+  expect_true(is.na(observed_from_snippet_1), info="The Scaling Correction Factor extracted from the snippet should be NA")
+  expect_true(is.na(observed_from_file_1), info="The Scaling Correction Factor extracted from the first output file should be NA")
+  expect_true(is.na(observed_from_file_2), info="The Scaling Correction Factor extracted from the second output file should be NA")
+  expect_equal(observed_from_file_3, expected_3, info="The Scaling Correction Factor extracted from the third output file should be correct.", tolerance=tolerance)
+})
 
 test_that("AIC", {   
   tolerance <- 0.001

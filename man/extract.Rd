@@ -8,6 +8,7 @@
 \alias{extract_free_parameter_count}
 \alias{extract_loglikelihood}
 \alias{extract_output_filename}
+\alias{extract_scaling_correction}
 \title{Extract the values within model output files.}
 \usage{
 extract_output_filename(mplus_output)
