@@ -6,6 +6,7 @@
 ^revdep$
 ^cran-comments\.md$
 ^ShortcutLucky1404\.lnk$
+README.html$
 
 documentation_peek.pdf
 documentation_for_developers/
