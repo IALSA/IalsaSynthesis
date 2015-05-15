@@ -8,7 +8,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 
-<meta name="author" content="Will Beasley" />
 
 <meta name="date" content="2015-05-15" />
 
@@ -63,48 +62,56 @@ img {
 
 <div id="header">
 <h1 class="title">Proposed Architecture of Synethesis Ecosystem for <a href="http://www.ialsa.org/">IALSA</a></h1>
-<h4 class="author"><em>Will Beasley</em></h4>
 <h4 class="date"><em>2015-05-15</em></h4>
 </div>
 
 <div id="TOC">
 <ul>
-<li><a href="#pre-conference-skeleton">Pre-conference skeleton</a></li>
-<li><a href="#accept-incoming-model-results">Accept incoming model results</a></li>
-<li><a href="#ialsasynthesis-r-package"><code>IalsaSynthesis</code> R Package</a></li>
-<li><a href="#projectconference-specific-goals-eg-ialsa-2015-portland-repo">Project/conference specific goals (eg Ialsa-2015-Portland repo)</a></li>
-<li><a href="#ialsapresentation-shiny-reports"><code>IalsaPresentation</code> Shiny reports</a></li>
-<li><a href="#websites-of-static-knitr-reports">Websites of static knitr reports</a></li>
+<li><a href="#pre-conference-preparation">Pre-conference Preparation</a></li>
+<li><a href="#ialsasynthesis-r-package">IalsaSynthesis R Package</a></li>
+<li><a href="#accept-incoming-model-results">Accept Incoming Model Results</a></li>
+<li><a href="#conferenceproject-specific-repositories-eg-ialsa-2015-portland-repo">Conference/Project Specific Repositories (eg Ialsa-2015-Portland repo)</a></li>
+<li><a href="#ialsapresentation-repository-of-shiny-reports">IalsaPresentation Repository of Shiny Reports</a></li>
+<li><a href="#websites-of-static-knitr-reports">Websites of Static knitr Reports</a></li>
 </ul>
 </div>
 
-<div id="pre-conference-skeleton" class="section level2">
-<h2>Pre-conference skeleton</h2>
+<div id="pre-conference-preparation" class="section level1">
+<h1>Pre-conference Preparation</h1>
+<p>Before the conference starts, each participating study completes a online survey. This <strong>Pre-conference Survey</strong> will be the first of two REDCap projects they interact with. Participants enter metadata about their study (eg, sample size, study length, list of coginitive &amp; physcal variables). This metadata is exported from REDCap into R, where it is assembled to produce a todo list for each study. The list enumerates all the models and tasks the participants ideally will submit for the workshop. The todo list informs the <strong>Participant Agenda</strong>, which is the second REDCap project (discussed below).</p>
+<p>For instance, assume the upcoming Tehran conference focused on the bivariate relationship between each cognitive and physical variable. If study ABBA declared they collected three cognitive and four physical variables, the resulting skeleton would consist of 12 rows, each corresponding to a bivariate model. Each conference will have different goals, so each pre-conference survey will be different, and the survey responses will be combined differently to produce an appropriate todo list.</p>
+<p>As Andrey observed, it may not be feasible for ‘wide’ studies to combine everything, and the todo list should prioritize the more important models to be estimated. The current plan is to emphasize models that are addressible by the largest number of studies. From IALSA’s perspective, it’s better to have the one model informed by six studies, than three models informed by two studies a piece. Based on feedback from participants, additional criteria might influence the prioritization.</p>
+<p><em>Details</em></p>
 <ul>
-<li>Runs on OU REDCap server &amp; IALSA server/cruncher</li>
-<li>REDCap Survey sent to each study</li>
-<li>Collects study characteristics (eg, gender(s) and variables)</li>
-<li>Establishes TODO list (eg, models that each study needs to submit by the middle of the conference)</li>
+<li>Runs on OU REDCap server &amp; probably IALSA server/cruncher</li>
+<li>REDCap Survey sent to each participating study</li>
+<li>Collects study characteristics in a 1st REDCap project (eg, gender(s) and variables)</li>
+<li>Establishes TODO list hosted on a 2nd REDCap project (eg, models that each study needs to submit by the middle of the conference)</li>
 </ul>
 </div>
-<div id="accept-incoming-model-results" class="section level2">
-<h2>Accept incoming model results</h2>
+<div id="ialsasynthesis-r-package" class="section level1">
+<h1>IalsaSynthesis R Package</h1>
+<p>The <a href="https://github.com/IALSA/IalsaSynthesis"><code>IalsaSyntheis</code></a> R package will provide functions run by participants on their own computers, and will be used across multiple conferences and workshops. The functions we develop and distribute will help us keep IALSA participants using similar functions across many years, even as the list of functions is modified and grown. Participants will be able to update to the latest package by running one line of code (<code>devtools::install_github(&quot;IALSA/IalsaSynthesis&quot;)</code>).</p>
+<p>The R package will contain only sample data; real data belongs in the conference-specific repositories. It will be developed primarily by UVic employees and collaborators (eg, Will &amp; Andrey), but contributions are welcomed from anyone using GitHub <a href="https://github.com/IALSA/IalsaSynthesis/pulls?utf8=%E2%9C%93&amp;q=is%3Apr+">pull requests</a>. For the sake of reproducibility, all IALSA reports include the “Session Info”, which document the specific version of each package used inthe report, including <code>IalsaSynethesis</code>.</p>
+<p>The boundaries are still being worked out between the <code>IalsaSyntheisis</code> package and the conference-specific repositories. The types of functionality likely provided by the R package include:</p>
+<ul>
+<li>Parse/extract model results in the output files (eg, the Mplus *.out files)</li>
+<li>Validate and check results for internal consistency</li>
+<li>Upload results to the correct record in the REDCap project (for the sake of redundancy, this likely includes both the extracted coefficients, andthe entire output file)</li>
+<li>Possibly automate the construction of some of the Mplus modeling code</li>
+</ul>
+</div>
+<div id="accept-incoming-model-results" class="section level1">
+<h1>Accept Incoming Model Results</h1>
+<p>The output from each model need to be stored centrally for at least two reasons. From a theoretical perspective, they’re needed a record in case subsequent research can build off them. For a practical perspective, the output might need to be reparsed, if we want to correct the parsing functions or gather additional coefficients.</p>
+<p>Ideally, I’d like the output files to be parsed on the participant’s computer, via the <code>IalsaSynthesis</code> package</p>
+<p><em>Details</em></p>
 <ul>
 <li>Hosted on Dropbox, fileserver, or maybe even REDCap</li>
 </ul>
 </div>
-<div id="ialsasynthesis-r-package" class="section level2">
-<h2><code>IalsaSynthesis</code> R Package</h2>
-<ul>
-<li>Runs on client laptops (which is why deployment through a package is important)</li>
-<li>Parse/extract results</li>
-<li>Validate results</li>
-<li>Upload to server</li>
-<li>Possibly helps automate some of the Mplus modeling code</li>
-</ul>
-</div>
-<div id="projectconference-specific-goals-eg-ialsa-2015-portland-repo" class="section level2">
-<h2>Project/conference specific goals (eg Ialsa-2015-Portland repo)</h2>
+<div id="conferenceproject-specific-repositories-eg-ialsa-2015-portland-repo" class="section level1">
+<h1>Conference/Project Specific Repositories (eg Ialsa-2015-Portland repo)</h1>
 <ul>
 <li>Runs on central IALSA server/cruncher</li>
 <li>Collect all models within a study</li>
@@ -115,8 +122,8 @@ img {
 <li>There are still some code that lives in the IalsaSynthesis package, but runs on the server. Some boundaries are still fuzzy to me.</li>
 </ul>
 </div>
-<div id="ialsapresentation-shiny-reports" class="section level2">
-<h2><code>IalsaPresentation</code> Shiny reports</h2>
+<div id="ialsapresentation-repository-of-shiny-reports" class="section level1">
+<h1>IalsaPresentation Repository of Shiny Reports</h1>
 <ul>
 <li>Runs on OU Shiny server</li>
 <li>Periodically refreshes its reports with new data</li>
@@ -131,8 +138,8 @@ img {
 <li>Meta-analysis level reports</li>
 </ul>
 </div>
-<div id="websites-of-static-knitr-reports" class="section level2">
-<h2>Websites of static knitr reports</h2>
+<div id="websites-of-static-knitr-reports" class="section level1">
+<h1>Websites of Static knitr Reports</h1>
 <ul>
 <li>Runs on server/cruncher; hosted on IALSA website</li>
 <li>Focuses on presentation of groomed datasets; contains very little manipulation.</li>
