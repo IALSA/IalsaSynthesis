@@ -66,17 +66,17 @@ Each conference will be unique, and require its own code and structure that can'
   * Push groomed datasets to Shiny.
   * This unmanned mechanism runs on a timer.
   
-In many cases the `IalsaSynthesis` functions will do the heavy-lifting, but it's the responsibility of the code  in the Conference repository to call the package.
+In many cases the `IalsaSynthesis` functions will do the heavy-lifting, but it's the responsibility of the Conference repository code to call the package.
 
 
 IalsaPresentation Repository of Shiny Reports
 =============================================
 The system's [presentation layer](http://martinfowler.com/eaaDev/SeparatedPresentation.html) has two complementary branches.  The interactive web page that is hosted on OU's [Shiny](http://shiny.rstudio.com/gallery/) server is discussed here.  The static reports are discussed in the subsequent section.  The code in this repository uses datasets that were already groomed; it contains very little manipulation.
 
-I belive the real strength of interactive visualization is that a human decides which information to suppress.  We'll leverage this ability in at least two ways: (A) as the participants are entering data into the catalog, and (B) after all the results are collected.  Furthermore, these two levels are crossed with two more: (1) individual study-level reports and (2) overall conference-level reports.  Each of the four cells can make a contribution to understanding and to the conference experience.
+I believe the real strength of interactive visualization is that a human decides which information to suppress.  We'll leverage this ability in at least two ways: (A) as the participants are entering data into the catalog, and (B) after all the results are collected.  Furthermore, these two levels are crossed with two more: (1) individual study-level reports and (2) overall conference-level reports.  Each of the four cells can make a contribution to understanding and to the conference experience.
 
 #### A1 Reports: Single Study Progress Bookkeeping
-During the conference, the reports will be periodically refreshed as more model results are collected and parsed (using the packge and repository described above).  The focus of the 'A1' reports is the participant's progress during the conference.  The bookkeeping mechanism guides them through the dozens of models the most run and submit.  It also indicates which submitted models contain incomplete or invalid information.
+During the conference, the reports will be periodically refreshed as more model results are collected and parsed (using the package and repository described above).  The focus of the 'A1' reports is the participant's progress during the conference.  The bookkeeping mechanism guides them through the dozens of models the most run and submit.  It also indicates which submitted models contain incomplete or invalid information.
 
 These reports also ideally
 
@@ -85,16 +85,20 @@ These reports also ideally
 *	suggest how to fix invalid model results
 
 #### A2 Reports: Overall Conference Progress
-Whereas an A1 report displays only one study at a time, an A2 tracks the progress of all participants.  The hope is that these time-evolving material (possibly shown on an overhead projector) emphasize the collective goals of the conference, and therefore increase the sense of comaradarie.  By showing which studies are on each stage, we hope that the leaders  are more willing to help those behind, and those behind are more likely to ask for help from the leaders.  
+Whereas an A1 report displays only one study at a time, an A2 tracks the progress of all participants.  The hope is that this continually-updated material (possibly shown on an overhead projector) emphasizes the collective goals of the conference, and therefore increase the sense of camaraderie.  By showing which studies are on each stage, we hope that the leaders are more willing to help those behind, and those behind are more likely to ask for help from the leaders.  
 
-UVic staff can more quickly identify who needs assistance, and decide whether to help them directly, or suggest one of the leading participants help them.  This type of collaboration is championed by [Jim Mold](https://find.ouhsc.edu/Faculty.aspx?FacultyID=363) (who was a big influence on the way the [BBMC](http://www.ouhsc.edu/bbmc/) operates its research investigations and QA projects).  One of the basic ideas is that even high-performing nurses/providers can learn better techniques from inexperienced and low-performing ones, if the environment is collaborative and safe.
+UVic staff can more quickly identify who needs assistance, and decide whether to help them directly, or suggest one of the leading participants help them.  This type of collaboration is championed by [Jim Mold](https://find.ouhsc.edu/Faculty.aspx?FacultyID=363) (who was a big influence on the way the [BBMC](http://www.ouhsc.edu/bbmc/) operates its research investigations and QA projects).  One of the basic ideas is that even high-performing nurses/providers can learn better techniques from inexperienced and low-performing ones, if the environment is collaborative and safe.  It sounds like IALSA already posses strong cohesion, and the A2 reports will be designed to increase the members' awareness of who needs help, and who can provide help.
 
 
 #### B1 Reports: Single Study Analysis
-zzzz zzzzzz zz zzzzz
+Whereas an A1 report shows the progress of a study during a conference, it doesn't contain any statistics or model results.  B1 reports do.  Some B1 reports will focus on descriptives and EDA (with tables & graphs).  Other reports will focus more on the models contributed to IALSA's meta-analysis.
+
+These automated reports can never thoughtfully or exhaustively analyze a program.  The first goal is to complete many of the predictable preliminary inspections that need to happen before any latent modeling (eg, graph univariate distributions, looking for nonlinear trends). It may reveal characteristics of the data that the analyst might not have known.  The second goal is to complete these rote tasks frees the analysts/participants to spend more time on analytic tasks computers can't automate.  
+
+The third goal is to catch problems with the data and manipulation *in the early stages*.  For example, last week a collaborator sent a dataset where gender was coded oppositely of almost every dataset I've seen (i.e., males were `0` and females were `1`).  Our automated reports quickly showed that 'females' were more physically aggressive, which was contrary to our expectations.  The problem was corrected very early in the process, and very little code or beliefs had to be changed.  In the software development world, it's a common belief that [mistakes caught late in the process cost much more time and money to fix](http://www.martinfowler.com/articles/continuousIntegration.html).  Since these reports are automatically updated every 10 minutes, the information and summaries are available to the researchers very quickly.  This should reduce the number of errors that propogate through the code in to the late stages.
 
 #### B2 Reports: Meta-analysis
-zz zzzzz zzz zzzzz zz
+This is probably the most exciting cell of the Shiny reports, and arguably the most important deliverable to IALSA.  These contain the forrest plots and other results that directly address the meta-analysis.  In a sense, the other three cells are the foundation of the meta-analysis.  They verify and validate the different models informing to the meta-analysis are complete and have sensible estimates.
 
 Websites of Static knitr Reports
 =============================================
