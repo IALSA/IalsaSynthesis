@@ -5,11 +5,6 @@
 .Rproj.user
 .Rproj.user/
 
-# produced vignettes
-vignettes/*.html
-vignettes/*.pdf
-inst/doc
-
 # README htmls in any folder
 README.html
 

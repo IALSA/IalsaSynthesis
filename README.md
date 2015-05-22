@@ -1,9 +1,10 @@
 <!-- rmarkdown v1 -->
 
-| Branch | [Travis-CI](https://travis-ci.org/IALSA/IalsaSynthesis/builds) (Ubuntu 12.04 LTS) | [AppVeyor](https://ci.appveyor.com/project/wibeasley/ialsasynthesis/history) (Windows Server 2012) | [Coveralls](https://coveralls.io/r/IALSA/IalsaSynthesis) | Zenodo |
-| :----- | :---------------------------: | :-----------------------------: | :-------: | :----: |
-| Master |  [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=master)](https://travis-ci.org/IALSA/IalsaSynthesis) | [![Build status](https://ci.appveyor.com/api/projects/status/8u5m65k0rr2veahx?svg=true)](https://ci.appveyor.com/project/wibeasley/ialsasynthesis) | [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg?branch=master)](https://coveralls.io/r/IALSA/IalsaSynthesis?branch=master) | -- |
-| Dev | [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=dev)](https://travis-ci.org/IALSA/IalsaSynthesis) | [![Build status](https://ci.appveyor.com/api/projects/status/8u5m65k0rr2veahx/branch/dev?svg=true)](https://ci.appveyor.com/project/wibeasley/ialsasynthesis/branch/dev) | [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg?branch=dev)](https://coveralls.io/r/IALSA/IalsaSynthesis?branch=dev) | -- |
+| [GitHub](https://github.com/OuhscBbmc/REDCapR) | [Travis-CI](https://travis-ci.org/IALSA/IalsaSynthesis/builds) | [AppVeyor](https://ci.appveyor.com/project/wibeasley/ialsasynthesis/history) | [Coveralls](https://coveralls.io/r/IALSA/IalsaSynthesis) |
+| :----- | :---------------------------: | :-----------------------------: | :-------: | 
+| [Master](https://github.com/IALSA/IalsaSynthesis/tree/master) |  [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=master)](https://travis-ci.org/IALSA/IalsaSynthesis) | [![Build status](https://ci.appveyor.com/api/projects/status/8u5m65k0rr2veahx/branch/master?svg=true)](https://ci.appveyor.com/project/wibeasley/ialsasynthesis/branch/master) | [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg?branch=master)](https://coveralls.io/r/IALSA/IalsaSynthesis?branch=master) |
+| [Dev](https://github.com/IALSA/IalsaSynthesis/tree/dev) | [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=dev)](https://travis-ci.org/IALSA/IalsaSynthesis) | [![Build status](https://ci.appveyor.com/api/projects/status/8u5m65k0rr2veahx/branch/dev?svg=true)](https://ci.appveyor.com/project/wibeasley/ialsasynthesis/branch/dev) | [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg?branch=dev)](https://coveralls.io/r/IALSA/IalsaSynthesis?branch=dev) |
+| | *Ubuntu 12.04 LTS* | *Windows Server 2012* | *Test Coverage* |
 
 
 IalsaSynthesis
@@ -11,7 +12,7 @@ IalsaSynthesis
 
 An [R](http://www.r-project.org/) Package for synthesizing information across collaborating research.
 
-[![IALSA Logo](http://www.ialsa.org/sites/default/files/logo_r_a.jpg)](http://www.ialsa.org/)
+[![logo](libs/images/ialsa_wide.png)](http://www.ialsa.org/)
 
 [IALSA](http://www.ialsa.org/) (Integrative Analysis of Longitudinal Studies of Aging) research network unites approximately 100 longtidinal studies from all over the world.  IALSA makes primary use of a [coordinated analysis approach](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2773828/) and various [harmonization methods](https://www.maelstrom-research.org/repository/methods_library). Our projects involve dealing with multiple longitudinal studies, each of which may count numerous statistical models, making the synthesis of results particularly arduous. The `IalsaSynthesis` package offers software tools for extracting, pooling, evaluating, and reporting the results of a large number of statistical models. See out [flagship project](https://github.com/IALSA/IALSA-2015-Portland), stemming from coordinated analysis workshop in Portland in February of 2015.
 
