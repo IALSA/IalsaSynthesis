@@ -1,6 +1,6 @@
 ---
 title: Proposed Architecture of Synthesis Ecosystem for [IALSA](http://www.ialsa.org/)
-date: 2015-05-15
+date: 2015-05-21
 output:
   html_document:
     keep_md: yes
@@ -58,7 +58,7 @@ If this automation is too brittle initially, we'll revert back to the Portland 2
 
 Conference/Project Specific Repositories, (eg Ialsa-2015-Portland repo)
 =============================================
-Each conference will be unique, and require its own code and structure that can't be completely encapsulted in the `IalsaSytnthesis` package (above) or the `IalsaPresentation` repository (below).  Here are some of the functions that may fall in this category.  There are still some code that lives in the IalsaSynthesis package, but runs on the server.  The locations of some ideal boundaries are still fuzzy to me.
+Each conference will be unique, and require its own code and structure that can't be completely encapsulated in the `IalsaSytnthesis` package (above) or the `IalsaPresentation` repository (below).  Here are some of the functions that may fall in this category.  There are still some code that lives in the IalsaSynthesis package, but runs on the server.  The locations of some ideal boundaries are still fuzzy to me.
 
   * Collect all models within a study.
   * Collect all studies within the conference.
@@ -69,7 +69,7 @@ Each conference will be unique, and require its own code and structure that can'
 In many cases the `IalsaSynthesis` functions will do the heavy-lifting, but it's the responsibility of the Conference repository code to call the package.
 
 
-IalsaPresentation Repository of Shiny Reports
+IalsaPresentation Repository of Interactive Reports
 =============================================
 The system's [presentation layer](http://martinfowler.com/eaaDev/SeparatedPresentation.html) has two complementary branches.  The interactive web page that is hosted on OU's [Shiny](http://shiny.rstudio.com/gallery/) server is discussed here.  The static reports are discussed in the subsequent section.  The code in this repository uses datasets that were already groomed; it contains very little manipulation.
 
@@ -95,16 +95,15 @@ Whereas an A1 report shows the progress of a study during a conference, it doesn
 
 These automated reports can never thoughtfully or exhaustively analyze a program.  The first goal is to complete many of the predictable preliminary inspections that need to happen before any latent modeling (eg, graph univariate distributions, looking for nonlinear trends). It may reveal characteristics of the data that the analyst might not have known.  The second goal is to complete these rote tasks frees the analysts/participants to spend more time on analytic tasks computers can't automate.  
 
-The third goal is to catch problems with the data and manipulation *in the early stages*.  For example, last week a collaborator sent a dataset where gender was coded oppositely of almost every dataset I've seen (i.e., males were `0` and females were `1`).  Our automated reports quickly showed that 'females' were more physically aggressive, which was contrary to our expectations.  The problem was corrected very early in the process, and very little code or beliefs had to be changed.  In the software development world, it's a common belief that [mistakes caught late in the process cost much more time and money to fix](http://www.martinfowler.com/articles/continuousIntegration.html).  Since these reports are automatically updated every 10 minutes, the information and summaries are available to the researchers very quickly.  This should reduce the number of errors that propogate through the code in to the late stages.
+The third goal is to catch problems with the data and manipulation *in the early stages*.  For example, last week a collaborator sent a dataset where gender was coded oppositely of almost every dataset I've seen (i.e., males were `0` and females were `1`).  Our automated reports quickly showed that 'females' were more physically aggressive, which was contrary to our expectations.  The problem was corrected very early in the process, and very little code or beliefs had to be changed.  In the software development world, it's a common belief that [mistakes caught late in the process cost much more time and money to fix](http://www.martinfowler.com/articles/continuousIntegration.html).  Since these reports are automatically updated every 10 minutes, the information and summaries are available to the researchers very quickly.  This should reduce the number of errors that propagate through the code in to the late stages.
 
 #### B2 Reports: Meta-analysis
-This is probably the most exciting cell of the Shiny reports, and arguably the most important deliverable to IALSA.  These contain the forrest plots and other results that directly address the meta-analysis.  In a sense, the other three cells are the foundation of the meta-analysis.  They verify and validate the different models informing to the meta-analysis are complete and have sensible estimates.
+This is probably the most exciting cell of the Shiny reports, and arguably the most important deliverable to IALSA.  These contain the forest plots and other results that directly address the meta-analysis.  In a sense, the other three cells are the foundation of the meta-analysis.  They verify and validate the different models informing to the meta-analysis are complete and have sensible estimates.
 
-Websites of Static knitr Reports
+Static Reports
 =============================================
-* Runs on server/cruncher; hosted on IALSA website
-* Focuses on presentation of groomed datasets; contains very little manipulation.
-* knitr reports themselves
-* Workflow that delivers data to the reports
-* Workflow that distributes reports to the webserver
+While the interactive Shiny reports fill an important need, I imagine that we'll always want them to be complemented by some static reports, and `knitr` is my preferred tool for this.  Among other reasons, static reports, images, and tables (a) present a consistent image to all readers, and (b) are necessary for conventional publications.  
 
+I believe IALSA participants would be best served if the static reports mimicked portions of the B1 & B2 Shiny reports.  I also hope that the static reports provide a intuitive template that participants can adapt to reporting and publication needs that we can't anticipate.
+
+Like the code for the Shiny reports, the knitr code will focus on the presentation of groomed datasets, and contain very little data manipulation code.  In addition to the reports themselves, our software will also need to deliver data to the reports, and then distribute the reports to the webserver.  I imagine this will workflow run workflow and render the reports on the cruncher, and then upload the reports to the IALSA webserver.

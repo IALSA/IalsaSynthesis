@@ -9,7 +9,7 @@
 <meta name="generator" content="pandoc" />
 
 
-<meta name="date" content="2015-05-15" />
+<meta name="date" content="2015-05-21" />
 
 <title>Proposed Architecture of Synthesis Ecosystem for IALSA</title>
 
@@ -62,7 +62,7 @@ img {
 
 <div id="header">
 <h1 class="title">Proposed Architecture of Synthesis Ecosystem for <a href="http://www.ialsa.org/">IALSA</a></h1>
-<h4 class="date"><em>2015-05-15</em></h4>
+<h4 class="date"><em>2015-05-21</em></h4>
 </div>
 
 <div id="TOC">
@@ -71,8 +71,8 @@ img {
 <li><a href="#ialsasynthesis-r-package">IalsaSynthesis R Package</a></li>
 <li><a href="#collect-model-results">Collect Model Results</a></li>
 <li><a href="#conferenceproject-specific-repositories-eg-ialsa-2015-portland-repo">Conference/Project Specific Repositories, (eg Ialsa-2015-Portland repo)</a></li>
-<li><a href="#ialsapresentation-repository-of-shiny-reports">IalsaPresentation Repository of Shiny Reports</a></li>
-<li><a href="#websites-of-static-knitr-reports">Websites of Static knitr Reports</a></li>
+<li><a href="#ialsapresentation-repository-of-interactive-reports">IalsaPresentation Repository of Interactive Reports</a></li>
+<li><a href="#static-reports">Static Reports</a></li>
 </ul>
 </div>
 
@@ -120,7 +120,7 @@ img {
 </div>
 <div id="conferenceproject-specific-repositories-eg-ialsa-2015-portland-repo" class="section level1">
 <h1>Conference/Project Specific Repositories, (eg Ialsa-2015-Portland repo)</h1>
-<p>Each conference will be unique, and require its own code and structure that can’t be completely encapsulted in the <code>IalsaSytnthesis</code> package (above) or the <code>IalsaPresentation</code> repository (below). Here are some of the functions that may fall in this category. There are still some code that lives in the IalsaSynthesis package, but runs on the server. The locations of some ideal boundaries are still fuzzy to me.</p>
+<p>Each conference will be unique, and require its own code and structure that can’t be completely encapsulated in the <code>IalsaSytnthesis</code> package (above) or the <code>IalsaPresentation</code> repository (below). Here are some of the functions that may fall in this category. There are still some code that lives in the IalsaSynthesis package, but runs on the server. The locations of some ideal boundaries are still fuzzy to me.</p>
 <ul>
 <li>Collect all models within a study.</li>
 <li>Collect all studies within the conference.</li>
@@ -130,8 +130,8 @@ img {
 </ul>
 <p>In many cases the <code>IalsaSynthesis</code> functions will do the heavy-lifting, but it’s the responsibility of the Conference repository code to call the package.</p>
 </div>
-<div id="ialsapresentation-repository-of-shiny-reports" class="section level1">
-<h1>IalsaPresentation Repository of Shiny Reports</h1>
+<div id="ialsapresentation-repository-of-interactive-reports" class="section level1">
+<h1>IalsaPresentation Repository of Interactive Reports</h1>
 <p>The system’s <a href="http://martinfowler.com/eaaDev/SeparatedPresentation.html">presentation layer</a> has two complementary branches. The interactive web page that is hosted on OU’s <a href="http://shiny.rstudio.com/gallery/">Shiny</a> server is discussed here. The static reports are discussed in the subsequent section. The code in this repository uses datasets that were already groomed; it contains very little manipulation.</p>
 <p>I believe the real strength of interactive visualization is that a human decides which information to suppress. We’ll leverage this ability in at least two ways: (A) as the participants are entering data into the catalog, and (B) after all the results are collected. Furthermore, these two levels are crossed with two more: (1) individual study-level reports and (2) overall conference-level reports. Each of the four cells can make a contribution to understanding and to the conference experience.</p>
 <div id="a1-reports-single-study-progress-bookkeeping" class="section level4">
@@ -153,22 +153,18 @@ img {
 <h4>B1 Reports: Single Study Analysis</h4>
 <p>Whereas an A1 report shows the progress of a study during a conference, it doesn’t contain any statistics or model results. B1 reports do. Some B1 reports will focus on descriptives and EDA (with tables &amp; graphs). Other reports will focus more on the models contributed to IALSA’s meta-analysis.</p>
 <p>These automated reports can never thoughtfully or exhaustively analyze a program. The first goal is to complete many of the predictable preliminary inspections that need to happen before any latent modeling (eg, graph univariate distributions, looking for nonlinear trends). It may reveal characteristics of the data that the analyst might not have known. The second goal is to complete these rote tasks frees the analysts/participants to spend more time on analytic tasks computers can’t automate.</p>
-<p>The third goal is to catch problems with the data and manipulation <em>in the early stages</em>. For example, last week a collaborator sent a dataset where gender was coded oppositely of almost every dataset I’ve seen (i.e., males were <code>0</code> and females were <code>1</code>). Our automated reports quickly showed that ‘females’ were more physically aggressive, which was contrary to our expectations. The problem was corrected very early in the process, and very little code or beliefs had to be changed. In the software development world, it’s a common belief that <a href="http://www.martinfowler.com/articles/continuousIntegration.html">mistakes caught late in the process cost much more time and money to fix</a>. Since these reports are automatically updated every 10 minutes, the information and summaries are available to the researchers very quickly. This should reduce the number of errors that propogate through the code in to the late stages.</p>
+<p>The third goal is to catch problems with the data and manipulation <em>in the early stages</em>. For example, last week a collaborator sent a dataset where gender was coded oppositely of almost every dataset I’ve seen (i.e., males were <code>0</code> and females were <code>1</code>). Our automated reports quickly showed that ‘females’ were more physically aggressive, which was contrary to our expectations. The problem was corrected very early in the process, and very little code or beliefs had to be changed. In the software development world, it’s a common belief that <a href="http://www.martinfowler.com/articles/continuousIntegration.html">mistakes caught late in the process cost much more time and money to fix</a>. Since these reports are automatically updated every 10 minutes, the information and summaries are available to the researchers very quickly. This should reduce the number of errors that propagate through the code in to the late stages.</p>
 </div>
 <div id="b2-reports-meta-analysis" class="section level4">
 <h4>B2 Reports: Meta-analysis</h4>
-<p>This is probably the most exciting cell of the Shiny reports, and arguably the most important deliverable to IALSA. These contain the forrest plots and other results that directly address the meta-analysis. In a sense, the other three cells are the foundation of the meta-analysis. They verify and validate the different models informing to the meta-analysis are complete and have sensible estimates.</p>
+<p>This is probably the most exciting cell of the Shiny reports, and arguably the most important deliverable to IALSA. These contain the forest plots and other results that directly address the meta-analysis. In a sense, the other three cells are the foundation of the meta-analysis. They verify and validate the different models informing to the meta-analysis are complete and have sensible estimates.</p>
 </div>
 </div>
-<div id="websites-of-static-knitr-reports" class="section level1">
-<h1>Websites of Static knitr Reports</h1>
-<ul>
-<li>Runs on server/cruncher; hosted on IALSA website</li>
-<li>Focuses on presentation of groomed datasets; contains very little manipulation.</li>
-<li>knitr reports themselves</li>
-<li>Workflow that delivers data to the reports</li>
-<li>Workflow that distributes reports to the webserver</li>
-</ul>
+<div id="static-reports" class="section level1">
+<h1>Static Reports</h1>
+<p>While the interactive Shiny reports fill an important need, I imagine that we’ll always want them to be complemented by some static reports, and <code>knitr</code> is my preferred tool for this. Among other reasons, static reports, images, and tables (a) present a consistent image to all readers, and (b) are necessary for conventional publications.</p>
+<p>I believe IALSA participants would be best served if the static reports mimicked portions of the B1 &amp; B2 Shiny reports. I also hope that the static reports provide a intuitive template that participants can adapt to reporting and publication needs that we can’t anticipate.</p>
+<p>Like the code for the Shiny reports, the knitr code will focus on the presentation of groomed datasets, and contain very little data manipulation code. In addition to the reports themselves, our software will also need to deliver data to the reports, and then distribute the reports to the webserver. I imagine this will workflow run workflow and render the reports on the cruncher, and then upload the reports to the IALSA webserver.</p>
 </div>
 
 
