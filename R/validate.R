@@ -28,10 +28,14 @@
 #' }
 
 validate_filename_output <- function( filename, path, file_extension_expected="out", underscore_count_expected=4L ) {
-  testit::assert("The output filename was not specified.", !missing(filename) & !is.na(filename) & !is.null(filename))
-  testit::assert("The output path was not specified.", !missing(path) & !is.na(path) & !is.null(path))
-  testit::assert("The expected file extension was not specified.", !is.na(file_extension_expected) & !is.null(file_extension_expected))
-  testit::assert("The expected underscore count was not specified.", !is.na(underscore_count_expected) & !is.null(underscore_count_expected))
+  testit::assert("The output filename was not specified.", 
+                 !missing(filename) & !is.na(filename) & !is.null(filename))
+  testit::assert("The output path was not specified.", 
+                 !missing(path) & !is.na(path) & !is.null(path))
+  testit::assert("The expected file extension was not specified.", 
+                 !is.na(file_extension_expected) & !is.null(file_extension_expected))
+  testit::assert("The expected underscore count was not specified.", 
+                 !is.na(underscore_count_expected) & !is.null(underscore_count_expected))
   
   full_path <- file.path(path, filename)
   if( !file.exists(full_path) )
@@ -42,7 +46,8 @@ validate_filename_output <- function( filename, path, file_extension_expected="o
     stop( paste0("The output file extension `", extension, "` did not match the expected value of `", file_extension_expected, "`."))
   
 #   underscore_count_observed <- sum(grepl(pattern="_", x=filename, perl=T))
-#   error_message <- paste0("An output filename should contain exactly ", underscore_count_expected, " underscores.  It had ", underscore_count_observed, ".")
+#   error_message <- paste0("An output filename should contain exactly ", underscore_count_expected, 
+#     " underscores.  It had ", underscore_count_observed, ".")
 #   testit::assert(error_message, underscore_count_observed==underscore_count_expected)
   
   return( invisible(TRUE) )

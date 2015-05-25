@@ -3,6 +3,10 @@
 ^\.gitignore$
 ^\.travis\.yml$
 ^appveyor\.yml$
+^wercker\.yml$
+^shim_package\.sh$
+^unshim_package\.sh$
+^\.lintr$
 ^revdep$
 ^cran-comments\.md$
 README.html$
