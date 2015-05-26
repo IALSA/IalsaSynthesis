@@ -1,7 +1,7 @@
 Package: IalsaSynthesis
 Title: Synthesizing Information Across Collaborating Research
-Version: 0.0-3
-Date: 2015-04-30
+Version: 0.1.0
+Date: 2015-05-24
 Authors@R: c(person("Will", "Beasley", email="wibeasley@hotmail.com", role=c("aut", "cre")),
     person("Andrey", "Koval", email="andkov@uvic.ca", role = c("aut")),
     person(given="Integrative Analysis of Longitudinal Studies of Aging (IALSA)", role = c("cph")))
@@ -16,11 +16,11 @@ Depends:
     R(>= 3.0.0),
     stats
 Imports:
-    readr,
     testit
 Suggests:
     devtools,
     knitr,
+    readr,
     testthat (>= 0.9)
 License: MIT + file LICENSE
 LazyData: TRUE
