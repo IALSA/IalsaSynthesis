@@ -9,7 +9,7 @@
 IalsaSynthesis
 ====================
 
-An [R](http://www.r-project.org/) Package for synthesizing information across collaborating research.
+An [R](http://www.r-project.org/) package for synthesizing information across collaborating research.
 
 [![logo](libs/images/ialsa_wide.png)](http://www.ialsa.org/)
 
