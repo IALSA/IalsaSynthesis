@@ -6,8 +6,6 @@
 | [Dev](https://github.com/IALSA/IalsaSynthesis/tree/dev) | [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=dev)](https://travis-ci.org/IALSA/IalsaSynthesis) | [![Build status](https://ci.appveyor.com/api/projects/status/8u5m65k0rr2veahx/branch/dev?svg=true)](https://ci.appveyor.com/project/wibeasley/ialsasynthesis/branch/dev) | [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg?branch=dev)](https://coveralls.io/r/IALSA/IalsaSynthesis?branch=dev) | [![wercker status](https://app.wercker.com/status/8010c64ba8d5d36495614496c9dff4a8/s/dev "wercker status")](https://app.wercker.com/project/bykey/8010c64ba8d5d36495614496c9dff4a8) |
 | | *Ubuntu 12.04 LTS* | *Windows Server 2012* | *Test Coverage* | *Docker-based* |
 
-[![logl](libs/images/ialsa_long.png)](http://www.ialsa.org/)
-
 IalsaSynthesis
 ====================
 
