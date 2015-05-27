@@ -31,7 +31,7 @@ install.packages("IalsaSynthesis")
 
 The *development* version of `IalsaSynthesis` can be installed from [GitHub](https://github.com/IALSA/IalsaSynthesis) after installing the `devtools` package.  (The *release* version will be available on [CRAN](http://cran.rstudio.com/) closer to the Cambridge conference in July 2015.)
 ```r
-install.packages("devtools")
+install.packages("devtools") #If it's not already installed.
 devtools::install_github(repo="IALSA/IalsaSynthesis")
 ```
 

@@ -11,4 +11,3 @@ build:
         Rscript -e "devtools::install()"
         source shim_package.sh
     - jimhester/r-coverage
-
