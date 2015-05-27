@@ -1,10 +1,11 @@
 <!-- rmarkdown v1 -->
 
-| [GitHub](https://github.com/IALSA/IalsaSynthesis) | [Travis-CI](https://travis-ci.org/IALSA/IalsaSynthesis/builds) | [AppVeyor](https://ci.appveyor.com/project/wibeasley/ialsasynthesis/history) | [Coveralls](https://coveralls.io/r/IALSA/IalsaSynthesis) | [Wercker](https://app.wercker.com/project/bykey/8010c64ba8d5d36495614496c9dff4a8)
-| :----- | :---------------------------: | :-----------------------------: | :-------: | :-------: | 
-| [Master](https://github.com/IALSA/IalsaSynthesis/tree/master) |  [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=master)](https://travis-ci.org/IALSA/IalsaSynthesis) | [![Build status](https://ci.appveyor.com/api/projects/status/8u5m65k0rr2veahx/branch/master?svg=true)](https://ci.appveyor.com/project/wibeasley/ialsasynthesis/branch/master) | [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg?branch=master)](https://coveralls.io/r/IALSA/IalsaSynthesis?branch=master) | [![wercker status](https://app.wercker.com/status/8010c64ba8d5d36495614496c9dff4a8/s/master "wercker status")](https://app.wercker.com/project/bykey/8010c64ba8d5d36495614496c9dff4a8) |
-| [Dev](https://github.com/IALSA/IalsaSynthesis/tree/dev) | [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=dev)](https://travis-ci.org/IALSA/IalsaSynthesis) | [![Build status](https://ci.appveyor.com/api/projects/status/8u5m65k0rr2veahx/branch/dev?svg=true)](https://ci.appveyor.com/project/wibeasley/ialsasynthesis/branch/dev) | [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg?branch=dev)](https://coveralls.io/r/IALSA/IalsaSynthesis?branch=dev) | [![wercker status](https://app.wercker.com/status/8010c64ba8d5d36495614496c9dff4a8/s/dev "wercker status")](https://app.wercker.com/project/bykey/8010c64ba8d5d36495614496c9dff4a8) |
-| | *Ubuntu 12.04 LTS* | *Windows Server 2012* | *Test Coverage* | *Docker-based* |
+| [GitHub](https://github.com/IALSA/IalsaSynthesis) | [Travis-CI](https://travis-ci.org/IALSA/IalsaSynthesis/builds) | [AppVeyor](https://ci.appveyor.com/project/wibeasley/ialsasynthesis/history) | [Wercker](https://app.wercker.com/project/bykey/8010c64ba8d5d36495614496c9dff4a8) | [Coveralls](https://coveralls.io/r/IALSA/IalsaSynthesis) | [Codecov](https://codecov.io/github/IALSA/IalsaSynthesis)
+| :----- | :---------------------------: | :------------: | :-------: | :-------: | :-------: | 
+| [Master](https://github.com/IALSA/IalsaSynthesis/tree/master) |  [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=master)](https://travis-ci.org/IALSA/IalsaSynthesis) | [![Build status](https://ci.appveyor.com/api/projects/status/8u5m65k0rr2veahx/branch/master?svg=true)](https://ci.appveyor.com/project/wibeasley/ialsasynthesis/branch/master) | [![wercker status](https://app.wercker.com/status/8010c64ba8d5d36495614496c9dff4a8/s/master "wercker status")](https://app.wercker.com/project/bykey/8010c64ba8d5d36495614496c9dff4a8) | [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg?branch=master)](https://coveralls.io/r/IALSA/IalsaSynthesis?branch=master) | [![codecov.io](http://codecov.io/github/IALSA/IalsaSynthesis/coverage.svg?branch=master)](http://codecov.io/github/IALSA/IalsaSynthesis?branch=master) |
+| [Dev](https://github.com/IALSA/IalsaSynthesis/tree/dev) | [![Travis-CI Build Status](https://travis-ci.org/IALSA/IalsaSynthesis.png?branch=dev)](https://travis-ci.org/IALSA/IalsaSynthesis) | [![Build status](https://ci.appveyor.com/api/projects/status/8u5m65k0rr2veahx/branch/dev?svg=true)](https://ci.appveyor.com/project/wibeasley/ialsasynthesis/branch/dev) | [![wercker status](https://app.wercker.com/status/8010c64ba8d5d36495614496c9dff4a8/s/dev "wercker status")](https://app.wercker.com/project/bykey/8010c64ba8d5d36495614496c9dff4a8) | [![Coverage Status](https://coveralls.io/repos/IALSA/IalsaSynthesis/badge.svg?branch=dev)](https://coveralls.io/r/IALSA/IalsaSynthesis?branch=dev) | [![codecov.io](http://codecov.io/github/IALSA/IalsaSynthesis/coverage.svg?branch=dev)](http://codecov.io/github/IALSA/IalsaSynthesis?branch=dev) |
+| | *Ubuntu 12.04 LTS* | *Windows Server 2012* | *Docker* | *Travis Tests* | *Wercker Tests* |
+
 
 IalsaSynthesis
 ====================
@@ -31,12 +32,17 @@ install.packages("IalsaSynthesis")
 
 The *development* version of `IalsaSynthesis` can be installed from [GitHub](https://github.com/IALSA/IalsaSynthesis) after installing the `devtools` package.  (The *release* version will be available on [CRAN](http://cran.rstudio.com/) closer to the Cambridge conference in July 2015.)
 ```r
-install.packages("devtools")
+install.packages("devtools") #If it's not already installed.
 devtools::install_github(repo="IALSA/IalsaSynthesis")
 ```
+
+The package documentation for the [development version](documentation_peek.pdf) on GitHub can be viewed without installing the package.
 
 ### Collaborative Development
 Consistent with IALSA goals, we encourage input and collaboration from the overall community.  If you're familar with GitHub and R packages, feel free to submit a [pull request](https://github.com/IALSA/IalsaSynthesis/pulls).  If you'd like to report a bug or make a suggestion, please create a GitHub [issue](https://github.com/IALSA/IalsaSynthesis/issues); issues are a usually a good place to ask public questions too.  However, feel free to email Andrey or Will privately (<andkov@uvic.ca> or <wibeasley@hotmail.com>).
 
 ### Thanks to Funders
 IALSA is funded through an NIH/NIA Program Project Grant ([P01AG043362](http://projectreporter.nih.gov/project_info_description.cfm?aid=8414933&icde=18870651&ddparam=&ddvalue=&ddsub=&cr=3&csb=default&cs=ASC); 2013-2018) to Oregon Health & Science University (Program Directors: [Scott Hofer](http://www.ialsa.org/users/hofer), [Andrea Piccinin](http://www.ialsa.org/users/piccinin), [Jeffrey Kaye](http://www.ialsa.org/users/kaye), and [Diana Kuh](http://www.ialsa.org/users/kuh)) and previously funded by NIH/NIA ([R01AG026453](http://projectreporter.nih.gov/project_info_description.cfm?aid=7210005&icde=19139556&ddparam=&ddvalue=&ddsub=&cr=5&csb=default&cs=ASC); 2007-2013) and CIHR (103284; 2010-2013).
+
+**Code coverage over time:**
+![codecov.io](http://codecov.io/github/IALSA/IalsaSynthesis/branch.svg?branch=dev)
