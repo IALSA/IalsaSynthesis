@@ -2,3 +2,9 @@
 data/* binary
 src/* text=lf
 R/* text=lf
+
+#So HTML, MD, & CSS files aren't considered as code when determining language of repo.
+# https://github.com/github/linguist#using-gitattributes
+*.html linguist-documentation
+*.md linguist-documentation
+*.css linguist-documentation
