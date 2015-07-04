@@ -1,10 +1,10 @@
 library(devtools)
 devtools::create(path=file.path(getwd(), "seed") ,check=TRUE, description=list(
-  "Title" = "Data manipulation operations",
-  "Description" = "Data manipulation operations frequently used in OUHSC BBMC projects.",
-  "Date" = "2014-03-08",
+  "Title" = "Synthesizing Information Across Collaborating Research",
+  "Description" = "Synthesizing information across collaborating research. Created for Integrative Analysis of Longitudinal Studies of Aging (http://www.ialsa.org/).",
+  "Date" = "2015-04-29",
   "Author" = "Will Beasley",
-  "Maintainer" = "'Will Beasley' <wibeasley@hotmail.com> "
+  "Maintainer" = "'Will Beasley' <wibeasley@hotmail.com>"
 ))
 
 use_travis(pkg = ".")
