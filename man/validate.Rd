@@ -11,10 +11,10 @@ validate_filename_output(filename, path, file_extension_expected = "out",
 \arguments{
   \item{filename}{The name of the file to be validated.}
   \item{path}{The location of the file to be validated.}
-  \item{file_extension_expected}{The extension of the
-  file. This defaults to "out", which corresponds to Mplus
-  output.} \item{underscore_count_expected}{The number of
-  underscores required in the name (not currently used).}
+  \item{file_extension_expected}{The extension of the file.
+  This defaults to "out", which corresponds to Mplus output.}
+  \item{underscore_count_expected}{The number of underscores
+  required in the name (not currently used).}
 }
 \value{
 An \code{invisible} \code{TRUE} value if the filename is
