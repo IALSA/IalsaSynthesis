@@ -1,7 +1,7 @@
 Package: IalsaSynthesis
 Title: Synthesizing Information Across Collaborating Research
 Description: Synthesizes information across collaborating research. Created specifically for Integrative Analysis of Longitudinal Studies of Aging (IALSA).
-Version: 0.1.3
+Version: 0.1.4
 Date: 2015-09-01
 Authors@R: c(person("Will", "Beasley", email="wibeasley@hotmail.com", role=c("aut", "cre")),
     person("Andrey", "Koval", email="andkov@uvic.ca", role = c("aut")),
@@ -25,4 +25,3 @@ Suggests:
 License: GPL-2
 LazyData: TRUE
 VignetteBuilder: knitr
-Roxygen: list(wrap = TRUE)

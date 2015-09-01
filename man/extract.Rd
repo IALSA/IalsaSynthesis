@@ -14,11 +14,10 @@
 extract_output_filename(mplus_output)
 }
 \arguments{
-  \item{mplus_output}{Text containing model output.}
+\item{mplus_output}{Text containing model output.}
 }
 \value{
-A \code{numeric} value corresponding to the desired
-quantity.
+A \code{numeric} value corresponding to the desired quantity.
 }
 \description{
 Functions that extract the values within model output files.
