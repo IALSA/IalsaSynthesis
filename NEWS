@@ -1,8 +1,9 @@
-Version 0.1 (Developed 2015-04-29 through ?)
+Version 0.1 (Developed 2015-04-29 through 2015-09-01)
 ------------------------------------------------------------------------------
 New Features:
-* TBD
+* Functions that extract basic estimates from Mplus models.
 
 GitHub Commits
 ------------------------------------------------------------------------------
-For a detailed change log, please see https://github.com/IALSA/IalsaSynthesis/commits/master
+* For a detailed change log, please see https://github.com/IALSA/IalsaSynthesis/commits/master.
+* For a list of the major releases, please see https://github.com/IALSA/IalsaSynthesis/releases.
