@@ -22,16 +22,23 @@ An [R](http://www.r-project.org/) package for synthesizing information across co
 
 [Andrey Koval](https://www.researchgate.net/profile/Andrey_Koval) (*[University of Victoria](http://www.uvic.ca/), [Department of Psychology](http://www.uvic.ca/socialsciences/psychology/)*).
 
-### Download and Installation Instructions
-<!--
-The *release* version of IalsaSynthesis can be installed from [CRAN](http://cran.r-project.org/web/packages/IalsaSynthesis/).
-```r
+
+### Download and Installation Instructions 
+
+| [CRAN](http://cran.rstudio.com/) | [Version](https://cran.r-project.org/package=IalsaSynthesis) | [Rate](http://cranlogs.r-pkg.org/) | [Zenodo](https://zenodo.org/search?ln=en&p=ialsasynthesis) | 
+|  :---- | :----: | :----: | :----: |
+| [Latest](https://cran.r-project.org/package=IalsaSynthesis) | [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/IalsaSynthesis)](https://cran.r-project.org/package=IalsaSynthesis) | ![CRANPace](http://cranlogs.r-pkg.org/badges/IalsaSynthesis) | [![DOI](https://zenodo.org/badge/4971/IALSA/IalsaSynthesis.svg)](https://zenodo.org/badge/latestdoi/4971/IALSA/IalsaSynthesis) |
+|   | *Latest CRAN version* | *CRAN Downloads* | *Independently-hosted Archive* |
+
+The released CRAN version of IalsaSynthesis can be installed through R. (The *release* version will be available on [CRAN](http://cran.rstudio.com/) closer to the Gothenburg conference.)
+
+```R
 install.packages("IalsaSynthesis")
 ```
--->
 
-The *development* version of `IalsaSynthesis` can be installed from [GitHub](https://github.com/IALSA/IalsaSynthesis) after installing the `devtools` package.  (The *release* version will be available on [CRAN](http://cran.rstudio.com/) closer to the Cambridge conference in July 2015.)
-```r
+The latest development version of IalsaSynthesis can be installed from [GitHub](https://github.com/IALSA/IalsaSynthesis) after installing the `devtools` package.
+
+```R
 install.packages("devtools") #If it's not already installed.
 devtools::install_github(repo="IALSA/IalsaSynthesis")
 ```
