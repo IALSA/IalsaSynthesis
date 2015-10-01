@@ -15,7 +15,11 @@
 extract_single_string(regex, source)
 }
 \arguments{
-\item{mplus_output}{Text containing model output.}
+\item{regex}{Regular Expression pattern to capture and extract contents.}
+
+\item{source}{Text to run the regex against.}
+
+\item{mplus_output}{Text containing model output.  This should be the text read from the file (not a file path).}
 }
 \value{
 A \code{numeric} value corresponding to the desired quantity.
