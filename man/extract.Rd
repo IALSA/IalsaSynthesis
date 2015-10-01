@@ -7,7 +7,7 @@
 \alias{extract_bic_adjusted}
 \alias{extract_free_parameter_count}
 \alias{extract_loglikelihood}
-\alias{extract_named_parameter}
+\alias{extract_named_wald}
 \alias{extract_output_filename}
 \alias{extract_scalar_float}
 \alias{extract_scalar_string}
@@ -18,7 +18,7 @@ extract_scalar_string(regex, source)
 
 extract_scalar_float(regex, source)
 
-extract_named_parameter(parameter_name, mplus_output)
+extract_named_wald(parameter_name, mplus_output)
 
 extract_output_filename(mplus_output,
   regex = "\\\\s+DATA:\\\\s+File = (.+);.*")
@@ -60,7 +60,7 @@ Functions that extract the values within model output files.
 \itemize{
 \item \code{extract_scalar_float}: Generalizable function to return a single numeric value.
 
-\item \code{extract_named_parameter}: Determine the estimate, standard error, z-score, and two-tailed p-value of an estimate.
+\item \code{extract_named_wald}: Determine the estimate, standard error, z-score, and two-tailed p-value of an estimate (ie, the results of a Wald test).
 
 \item \code{extract_output_filename}: Determine the path of the Mplus output file.
 

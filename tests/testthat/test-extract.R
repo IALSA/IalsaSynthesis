@@ -41,14 +41,14 @@ test_that("parameter_estimate", {
   expected_R_RES_PC <- c(0.051, 0.033, 1.566, 0.117)
   
   # Retrieve values
-  observed_from_snippet_R_IPIC <- IalsaSynthesis::extract_named_parameter("R_IPIC", snippet_new_parameters)
-  observed_from_file_R_IPIC <- IalsaSynthesis::extract_named_parameter("R_IPIC", output_1)
+  observed_from_snippet_R_IPIC <- IalsaSynthesis::extract_named_wald("R_IPIC", snippet_new_parameters)
+  observed_from_file_R_IPIC <- IalsaSynthesis::extract_named_wald("R_IPIC", output_1)
 
-  observed_from_snippet_R_SPSC <- IalsaSynthesis::extract_named_parameter("R_SPSC", snippet_new_parameters)
-  observed_from_file_R_SPSC <- IalsaSynthesis::extract_named_parameter("R_SPSC", output_1)
+  observed_from_snippet_R_SPSC <- IalsaSynthesis::extract_named_wald("R_SPSC", snippet_new_parameters)
+  observed_from_file_R_SPSC <- IalsaSynthesis::extract_named_wald("R_SPSC", output_1)
 
-  observed_from_snippet_R_RES_PC <- IalsaSynthesis::extract_named_parameter("R_RES_PC", snippet_new_parameters)
-  observed_from_file_R_RES_PC <- IalsaSynthesis::extract_named_parameter("R_RES_PC", output_1)
+  observed_from_snippet_R_RES_PC <- IalsaSynthesis::extract_named_wald("R_RES_PC", snippet_new_parameters)
+  observed_from_file_R_RES_PC <- IalsaSynthesis::extract_named_wald("R_RES_PC", output_1)
 
   # Compare values
   expect_equal(as.numeric(observed_from_snippet_R_IPIC), expected_R_IPIC, info="The R_IPIC parameter should be correct.", tolerance=tolerance)

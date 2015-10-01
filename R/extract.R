@@ -36,8 +36,8 @@ extract_scalar_float <- function( regex, source ) {
 
 
 #' @export
-#' @describeIn extract Determine the estimate, standard error, z-score, and two-tailed p-value of an estimate.
-extract_named_parameter <- function( parameter_name, mplus_output ) {
+#' @describeIn extract Determine the estimate, standard error, z-score, and two-tailed p-value of an estimate (ie, the results of a Wald test).
+extract_named_wald <- function( parameter_name, mplus_output ) {
   # regex <- paste0("\\s+R_IPIC\\s+(?<point>-?\\d+\\.\\d+)\\s+(?<se>-?\\d+\\.\\d+)\\s+(?<z>-?\\d+\\.\\d+)\\s+(?<p>\\d\\.\\d+)")
   regex <- paste0("\\s+", parameter_name, "\\s+(?<point>-?\\d+\\.\\d+)\\s+(?<se>-?\\d+\\.\\d+)\\s+(?<z>-?\\d+\\.\\d+)\\s+(?<p>\\d\\.\\d+)")
   matches <- regexpr(regex, mplus_output, perl=TRUE);
@@ -63,11 +63,8 @@ extract_named_parameter <- function( parameter_name, mplus_output ) {
   attr(result_p, "match.length") <- attr(matches, "capture.length")[1, "p"]
   p <- regmatches(mplus_output, result_p)
   
-  # est_string <- c(point, se, z, p)
-  # est <- as.numeric(est_string)
-  # names(est) <- c("point", "se", "z", "p")
-  est <- list("point"=point, "se"=se, "z"=z, "p"=p)
-  return( est )
+  wald <- list("point"=point, "se"=se, "z"=z, "p"=p)
+  return( wald )
 }
 
 #' @export
