@@ -17,19 +17,25 @@ extract_scalar_string(regex, source)
 
 extract_scalar_float(regex, source)
 
-extract_output_filename(mplus_output)
+extract_output_filename(mplus_output, regex = ".+DATA:  File = (.+);.*")
 
-extract_free_parameter_count(mplus_output)
+extract_free_parameter_count(mplus_output,
+  regex = "Number of Free Parameters\\\\s+(\\\\d{1,})\\\\s+")
 
-extract_loglikelihood(mplus_output)
+extract_loglikelihood(mplus_output,
+  regex = "Loglikelihood\\\\s+H0 Value\\\\s+([-\\\\d\\\\.]+)\\\\s+")
 
-extract_scaling_correction(mplus_output)
+extract_scaling_correction(mplus_output,
+  regex = "\\\\s+H0 Scaling Correction Factor\\\\s+([-\\\\d\\\\.]+)\\\\s+for MLR\\\\s+")
 
-extract_aic(mplus_output)
+extract_aic(mplus_output,
+  regex = "Akaike \\\\(AIC\\\\)\\\\s+([-\\\\d\\\\.]+)\\\\s+")
 
-extract_bic(mplus_output)
+extract_bic(mplus_output,
+  regex = "Bayesian \\\\(BIC\\\\)\\\\s+([-\\\\d\\\\.]+)\\\\s+")
 
-extract_bic_adjusted(mplus_output)
+extract_bic_adjusted(mplus_output,
+  regex = "\\\\s+Sample-Size Adjusted BIC\\\\s+([-\\\\d\\\\.]+)\\\\s+")
 }
 \arguments{
 \item{regex}{Regular Expression pattern to capture and extract contents.}
