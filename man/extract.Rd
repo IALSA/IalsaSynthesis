@@ -17,7 +17,8 @@ extract_scalar_string(regex, source)
 
 extract_scalar_float(regex, source)
 
-extract_output_filename(mplus_output, regex = ".+DATA:  File = (.+);.*")
+extract_output_filename(mplus_output,
+  regex = "\\\\s+DATA:\\\\s+File = (.+);.*")
 
 extract_free_parameter_count(mplus_output,
   regex = "Number of Free Parameters\\\\s+(\\\\d{1,})\\\\s+")

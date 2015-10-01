@@ -35,7 +35,9 @@ extract_scalar_float <- function( regex, source ) {
 
 #' @export
 #' @describeIn extract Determine the path of the Mplus output file.
-extract_output_filename <- function( mplus_output, regex=".+DATA:  File = (.+);.*" ) {
+extract_output_filename <- function( mplus_output, regex="\\s+DATA:\\s+File = (.+);.*" ) {
+  # Regex notes
+  #   - Sometimes "File" is on the line below "DATA:"
   # gsub(pattern="DATA:  File = (.+);", replacement="\\1", mplus_output, perl=T)
   extract_scalar_string(regex, mplus_output)
 }

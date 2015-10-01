@@ -2,50 +2,41 @@ library(testthat)
 
 context("Extract")
 
-path_1 <- base::file.path(devtools::inst(name="IalsaSynthesis"), "test_data/2015-portland/b1_female_ae_muscle_fluid_grip_trailsb.out")
-path_2 <- base::file.path(devtools::inst(name="IalsaSynthesis"), "test_data/2015-portland/b1_male_aehplus_muscle_memory_grip_logicalmemory.out")
-path_3 <- base::file.path(devtools::inst(name="IalsaSynthesis"), "test_data/2015-portland/u1_male_aehplus_muscle_noCog_hand_noCogSpec.out")
+path_1 <- base::file.path(devtools::inst(name="IalsaSynthesis"), "test_data/2015-portland/b1_female_a_grip_categories_4.out")
+path_2 <- base::file.path(devtools::inst(name="IalsaSynthesis"), "test_data/2015-portland/b1_female_aehplus_gait_grip.out")
+path_3 <- base::file.path(devtools::inst(name="IalsaSynthesis"), "test_data/2015-portland/b1_female_aehplus_grip_gait.out")
 output_1 <- readr::read_file(path_1)
 output_2 <- readr::read_file(path_2)
 output_3 <- readr::read_file(path_3)
 
 
 snippet_fit_1 <- "
-
+THE MODEL ESTIMATION TERMINATED NORMALLY
 MODEL FIT INFORMATION
-
-Number of Free Parameters                       25
-
+Number of Free Parameters                       23
 Loglikelihood
-
-H0 Value                      -11183.730
-
+          H0 Value                      -21788.910
+          H0 Scaling Correction Factor      1.1594
+            for MLR
 Information Criteria
-
-Akaike (AIC)                   22417.460
-Bayesian (BIC)                 22526.536
-Sample-Size Adjusted BIC       22447.171
-(n* = (n + 2) / 24)
-
-
-
+          Akaike (AIC)                   43623.820
+          Bayesian (BIC)                 43736.928
+          Sample-Size Adjusted BIC       43663.878
+            (n* = (n + 2) / 24)
 MODEL RESULTS
-
-Two-Tailed"
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value"
 
 test_that("Path Data File", {   
-  expected_1 <- "C:\\Users\\Dragon Hat\\Desktop\\CbaMaster.csv"
-  expected_2 <- "C:\\Users\\Andrea Zammit\\Desktop\\EASMaster.csv"
-  expected_3 <- "\"C:\\Users\\wuche\\Dropbox\\IALSA\\Data\\HABC-9999.dta.dat\"" #Notice this one has a fishy extension and enclosing quotes.
+  expected_1 <- "radcMAP_wide.dat"
+  expected_2 <- "\"C:\\Users\\wuche\\Dropbox\\IALSA\\Data\\HABC-9999.dta.dat\"" #Notice this one has a fishy extension and enclosing quotes.
+  expected_3 <- "C:\\Users\\Andrea Zammit\\Desktop\\EASMaster.csv"
   
-  snippet_1 <- "        TITLE: m5, b1,trails, peak flow, LGM,ae Conditional,female
-  
-  DATA:  File = C:\\Users\\Dragon Hat\\Desktop\\CbaMaster.csv;
-  
-  
-  VARIABLE: Names are
-  ! demographics
-  SubjectID	Sex	Ethnic	Caus	DemEver	Bagesq	deathage	DEMO23	Educyrs	Status	"
+  snippet_1 <- "INPUT INSTRUCTIONS
+    TITLE: M6 Pulmonary Function, Grip, Fully Conditional, Male
+    DATA:  File = radcMAP_wide.dat;
+    VARIABLE: Names are
+  projid study_x scaled_to_x agreeableness conscientiousness extraversion"
   
   observed_from_snippet_1 <- IalsaSynthesis::extract_output_filename(snippet_1)
   observed_from_file_1 <- IalsaSynthesis::extract_output_filename(output_1)
@@ -60,9 +51,9 @@ test_that("Path Data File", {
 
 test_that("Free Parameter Count", {   
   tolerance <- 0
-  expected_1 <- 25
-  expected_2 <- 41
-  expected_3 <- 18
+  expected_1 <- 23
+  expected_2 <- 61
+  expected_3 <- 41
   
   observed_from_snippet_1 <- IalsaSynthesis::extract_free_parameter_count(snippet_fit_1)
   observed_from_file_1 <- IalsaSynthesis::extract_free_parameter_count(output_1)
@@ -77,9 +68,9 @@ test_that("Free Parameter Count", {
 
 test_that("Loglikelihood", {   
   tolerance <- 0.001
-  expected_1 <- -11183.730
-  expected_2 <- -1767.351
-  expected_3 <- -20217.511
+  expected_1 <- -21788.910
+  expected_2 <- -23971.552
+  expected_3 <- -2700.358
   
   observed_from_snippet_1 <- IalsaSynthesis::extract_loglikelihood(snippet_fit_1)
   observed_from_file_1 <- IalsaSynthesis::extract_loglikelihood(output_1)
@@ -94,26 +85,26 @@ test_that("Loglikelihood", {
 
 test_that("Scaling Correction Factor", {   
   tolerance <- 0.001
-  # expected_1 <- NA_real_
-  # expected_2 <- NA_real_
-  expected_3 <- 1.3467
+  expected_1 <- 1.1594
+  expected_2 <- 1.0763
+  expected_3 <- NA_real_
   
   observed_from_snippet_1 <- IalsaSynthesis::extract_scaling_correction(snippet_fit_1)
   observed_from_file_1 <- IalsaSynthesis::extract_scaling_correction(output_1)
   observed_from_file_2 <- IalsaSynthesis::extract_scaling_correction(output_2)
   observed_from_file_3 <- IalsaSynthesis::extract_scaling_correction(output_3)
   
-  expect_true(is.na(observed_from_snippet_1), info="The Scaling Correction Factor extracted from the snippet should be NA")
-  expect_true(is.na(observed_from_file_1), info="The Scaling Correction Factor extracted from the first output file should be NA")
-  expect_true(is.na(observed_from_file_2), info="The Scaling Correction Factor extracted from the second output file should be NA")
-  expect_equal(observed_from_file_3, expected_3, info="The Scaling Correction Factor extracted from the third output file should be correct.", tolerance=tolerance)
+  expect_equal(observed_from_snippet_1, expected_1, info="The Scaling Correction Factor extracted from the snippet should be NA")
+  expect_equal(observed_from_file_1, expected_1, info="The Scaling Correction Factor extracted from the first output file should be correct.", tolerance=tolerance)
+  expect_equal(observed_from_file_2, expected_2, info="The Scaling Correction Factor extracted from the second output file should be correct.", tolerance=tolerance)
+  expect_true(is.na(observed_from_file_3), info="The Scaling Correction Factor extracted from the third output file should be NA")
 })
 
 test_that("AIC", {   
   tolerance <- 0.001
-  expected_1 <- 22417.460
-  expected_2 <- 3616.701
-  expected_3 <- 40471.022
+  expected_1 <- 43623.820
+  expected_2 <- 48065.105
+  expected_3 <- 5482.716
   
   observed_from_snippet_1 <- IalsaSynthesis::extract_aic(snippet_fit_1)
   observed_from_file_1 <- IalsaSynthesis::extract_aic(output_1)
@@ -128,9 +119,9 @@ test_that("AIC", {
 
 test_that("BIC", {   
   tolerance <- 0.001
-  expected_1 <- 22526.536
-  expected_2 <- 3710.044
-  expected_3 <- 40566.198
+  expected_1 <- 43736.928
+  expected_2 <- 48447.544
+  expected_3 <- 5605.324
   
   observed_from_snippet_1 <- IalsaSynthesis::extract_bic(snippet_fit_1)
   observed_from_file_1 <- IalsaSynthesis::extract_bic(output_1)
@@ -145,9 +136,9 @@ test_that("BIC", {
 
 test_that("BIC: Sample-Size Adjusted", {   
   tolerance <- 0.001
-  expected_1 <- 22447.171
-  expected_2 <- 3580.867
-  expected_3 <- 40509.018
+  expected_1 <- 43663.878
+  expected_2 <- 48253.714
+  expected_3 <- 5475.578
   
   observed_from_snippet_1 <- IalsaSynthesis::extract_bic_adjusted(snippet_fit_1)
   observed_from_file_1 <- IalsaSynthesis::extract_bic_adjusted(output_1)

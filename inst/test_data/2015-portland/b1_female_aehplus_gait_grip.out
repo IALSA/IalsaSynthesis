@@ -3,7 +3,7 @@ MUTHEN & MUTHEN
 09/16/2015   2:04 PM
 INPUT INSTRUCTIONS
   TITLE: M6 Pulmonary Function, Gait, Grip, Fully Conditional, female
-  DATA:  File = ELSA_Portland_New.dat;
+  DATA:  File = "C:\Users\wuche\Dropbox\IALSA\Data\HABC-9999.dta.dat";
       DATA LONGTOWIDE:
       LONG = walkspee | grip |Height|years|SmokHist|diab|cardio;
       WIDE = c1-c6 | p1-p6 |hei1-hei6|time1-time6|
