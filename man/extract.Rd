@@ -9,10 +9,27 @@
 \alias{extract_loglikelihood}
 \alias{extract_output_filename}
 \alias{extract_scaling_correction}
+\alias{extract_single_float}
 \alias{extract_single_string}
 \title{Extract the values within model output files.}
 \usage{
 extract_single_string(regex, source)
+
+extract_single_float(regex, source)
+
+extract_output_filename(mplus_output)
+
+extract_free_parameter_count(mplus_output)
+
+extract_loglikelihood(mplus_output)
+
+extract_scaling_correction(mplus_output)
+
+extract_aic(mplus_output)
+
+extract_bic(mplus_output)
+
+extract_bic_adjusted(mplus_output)
 }
 \arguments{
 \item{regex}{Regular Expression pattern to capture and extract contents.}
@@ -27,6 +44,24 @@ A \code{numeric} value corresponding to the desired quantity.
 \description{
 Functions that extract the values within model output files.
 }
+\section{Functions}{
+\itemize{
+\item \code{extract_single_float}: Generalizable function to return a single numeric value.
+
+\item \code{extract_output_filename}: Determine the path of the Mplus output file.
+
+\item \code{extract_free_parameter_count}: Determine the number of free parameters for the model estimation.
+
+\item \code{extract_loglikelihood}: Determine the log likelihood for the model estimation.
+
+\item \code{extract_scaling_correction}: Determine the H0 Scaling Correction Factor for the model estimation.
+
+\item \code{extract_aic}: Determine the AIC for the model estimation.
+
+\item \code{extract_bic}: Determine the BIC for the model estimation.
+
+\item \code{extract_bic_adjusted}: Determine the Sample-Size Adjusted BIC for the model estimation.
+}}
 \examples{
 library(IalsaSynthesis) #Load the package into the current R session.
 }
