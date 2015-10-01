@@ -35,24 +35,30 @@ snippet_new_parameters <-
 QUALITY OF NUMERICAL RESULTS"
 
 test_that("parameter_estimate", {   
-  
-  
-  
-  
   tolerance <- 0.001
-  expected_1 <- c(0.146, 0.040, 3.608, 0.000)
-#   expected_2 <- -23971.552
-  # expected_3 <- -2700.358
+  expected_R_IPIC <- c(0.146, 0.040, 3.608, 0.000)
+  expected_R_SPSC <- c(0.038, 0.235, 0.161, 0.872)
+  expected_R_RES_PC <- c(0.051, 0.033, 1.566, 0.117)
   
-  observed_from_snippet_1 <- IalsaSynthesis::extract_named_parameter("R_IPIC", snippet_new_parameters)
-  observed_from_file_1 <- IalsaSynthesis::extract_named_parameter("R_IPIC", output_1)
-  # observed_from_file_2 <- IalsaSynthesis::extract_loglikelihood(output_2)
-  # observed_from_file_3 <- IalsaSynthesis::extract_loglikelihood(output_3)
+  # Retrieve values
+  observed_from_snippet_R_IPIC <- IalsaSynthesis::extract_named_parameter("R_IPIC", snippet_new_parameters)
+  observed_from_file_R_IPIC <- IalsaSynthesis::extract_named_parameter("R_IPIC", output_1)
+
+  observed_from_snippet_R_SPSC <- IalsaSynthesis::extract_named_parameter("R_SPSC", snippet_new_parameters)
+  observed_from_file_R_SPSC <- IalsaSynthesis::extract_named_parameter("R_SPSC", output_1)
+
+  observed_from_snippet_R_RES_PC <- IalsaSynthesis::extract_named_parameter("R_RES_PC", snippet_new_parameters)
+  observed_from_file_R_RES_PC <- IalsaSynthesis::extract_named_parameter("R_RES_PC", output_1)
+
+  # Compare values
+  expect_equal(as.numeric(observed_from_snippet_R_IPIC), expected_R_IPIC, info="The R_IPIC parameter should be correct.", tolerance=tolerance)
+  expect_equal(as.numeric(observed_from_file_R_IPIC), expected_R_IPIC, info="The R_IPIC parameter should be correct.", tolerance=tolerance)
   
-  expect_equal(as.numeric(observed_from_snippet_1), expected_1, info="The free parameter count extracted from the snippet should be correct.", tolerance=tolerance)
-  expect_equal(as.numeric(observed_from_file_1), expected_1, info="The loglikelihood extracted from the first output file should be correct.", tolerance=tolerance)
-  # expect_equal(observed_from_file_2, expected_2, info="The loglikelihood extracted from the second output file should be correct.", tolerance=tolerance)
-  # expect_equal(observed_from_file_3, expected_3, info="The loglikelihood extracted from the third output file should be correct.", tolerance=tolerance)
+  expect_equal(as.numeric(observed_from_snippet_R_SPSC), expected_R_SPSC, info="The R_SPSC parameter should be correct.", tolerance=tolerance)
+  expect_equal(as.numeric(observed_from_file_R_SPSC), expected_R_SPSC, info="The R_SPSC parameter should be correct.", tolerance=tolerance)
+  
+  expect_equal(as.numeric(observed_from_snippet_R_RES_PC), expected_R_RES_PC, info="The R_RES_PC parameter should be correct.", tolerance=tolerance)
+  expect_equal(as.numeric(observed_from_file_R_RES_PC), expected_R_RES_PC, info="The R_RES_PC parameter should be correct.", tolerance=tolerance)
 })
 
 test_that("Path Data File", {   
