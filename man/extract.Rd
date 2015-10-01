@@ -8,14 +8,14 @@
 \alias{extract_free_parameter_count}
 \alias{extract_loglikelihood}
 \alias{extract_output_filename}
+\alias{extract_scalar_float}
+\alias{extract_scalar_string}
 \alias{extract_scaling_correction}
-\alias{extract_single_float}
-\alias{extract_single_string}
 \title{Extract the values within model output files.}
 \usage{
-extract_single_string(regex, source)
+extract_scalar_string(regex, source)
 
-extract_single_float(regex, source)
+extract_scalar_float(regex, source)
 
 extract_output_filename(mplus_output)
 
@@ -46,7 +46,7 @@ Functions that extract the values within model output files.
 }
 \section{Functions}{
 \itemize{
-\item \code{extract_single_float}: Generalizable function to return a single numeric value.
+\item \code{extract_scalar_float}: Generalizable function to return a single numeric value.
 
 \item \code{extract_output_filename}: Determine the path of the Mplus output file.
 
