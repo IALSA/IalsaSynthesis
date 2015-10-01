@@ -40,9 +40,12 @@ extract_scalar_float <- function( regex, source ) {
 extract_named_wald <- function( parameter_name, mplus_output ) {
   # regex <- paste0("\\s+R_IPIC\\s+(?<point>-?\\d+\\.\\d+)\\s+(?<se>-?\\d+\\.\\d+)\\s+(?<z>-?\\d+\\.\\d+)\\s+(?<p>\\d\\.\\d+)")
   regex <- paste0("\\s+", parameter_name, "\\s+(?<point>-?\\d+\\.\\d+)\\s+(?<se>-?\\d+\\.\\d+)\\s+(?<z>-?\\d+\\.\\d+)\\s+(?<p>\\d\\.\\d+)")
-  matches <- regexpr(regex, mplus_output, perl=TRUE);
-  matches
+  matches <- regexpr(regex, mplus_output, perl=TRUE)
   
+  # # Failed attempt to reduce calls
+  # attr(result_point, "match.length") <- attr(matches, "capture.length")[1, "point"]
+  # point <- regmatches(mplus_output, result_point)
+
   # Extract point estimate
   result_point <- attr(matches, "capture.start")[1, "point"]
   attr(result_point, "match.length") <- attr(matches, "capture.length")[1, "point"]
