@@ -7,6 +7,7 @@
 #' @param mplus_output Text containing model output.  This should be the text read from the file (not a file path).
 #' @param regex Regular Expression pattern to capture and extract contents.
 #' @param source Text to run the regex against.
+#' @param parameter_name Variable name in Mplus output to extract.
 #' 
 #' @return A \code{numeric} value corresponding to the desired quantity.
 #' 
@@ -31,6 +32,41 @@ extract_scalar_string <- function( regex, source ) {
 #' @describeIn extract Generalizable function to return a single numeric value.
 extract_scalar_float <- function( regex, source ) {
   return( as.numeric(extract_scalar_string(regex, source)) )
+}
+
+
+#' @export
+#' @describeIn extract Determine the estimate, standard error, z-score, and two-tailed p-value of an estimate.
+extract_named_parameter <- function( parameter_name, mplus_output ) {
+regex <- paste0("\\s+R_IPIC\\s+(?<point>-?\\d+\\.\\d+)\\s+(?<se>-?\\d+\\.\\d+)\\s+(?<z>-?\\d+\\.\\d+)\\s+(?<p>\\d\\.\\d+)")
+  matches <- regexpr(regex, mplus_output, perl=TRUE);
+  matches
+  
+  # Extract point estimate
+  result_point <- attr(matches, "capture.start")[1, "point"]
+  attr(result_point, "match.length") <- attr(matches, "capture.length")[1, "point"]
+  point <- regmatches(mplus_output, result_point)
+  
+  # Extract standard error
+  result_se <- attr(matches, "capture.start")[1, "se"]
+  attr(result_se, "match.length") <- attr(matches, "capture.length")[1, "se"]
+  se <- regmatches(mplus_output, result_se)
+  
+  # Extract z
+  result_z <- attr(matches, "capture.start")[1, "z"]
+  attr(result_z, "match.length") <- attr(matches, "capture.length")[1, "z"]
+  z <- regmatches(mplus_output, result_z)
+  
+  # Extract p
+  result_p <- attr(matches, "capture.start")[1, "p"]
+  attr(result_p, "match.length") <- attr(matches, "capture.length")[1, "p"]
+  p <- regmatches(mplus_output, result_p)
+  
+  est_string <- c(point, se, z, p)
+  est <- as.numeric(est_string)
+  names(est) <- c("point", "se", "z", "p")
+  
+  return( est )
 }
 
 #' @export

@@ -7,6 +7,7 @@
 \alias{extract_bic_adjusted}
 \alias{extract_free_parameter_count}
 \alias{extract_loglikelihood}
+\alias{extract_named_parameter}
 \alias{extract_output_filename}
 \alias{extract_scalar_float}
 \alias{extract_scalar_string}
@@ -16,6 +17,8 @@
 extract_scalar_string(regex, source)
 
 extract_scalar_float(regex, source)
+
+extract_named_parameter(parameter_name, mplus_output)
 
 extract_output_filename(mplus_output,
   regex = "\\\\s+DATA:\\\\s+File = (.+);.*")
@@ -43,6 +46,8 @@ extract_bic_adjusted(mplus_output,
 
 \item{source}{Text to run the regex against.}
 
+\item{parameter_name}{Variable name in Mplus output to extract.}
+
 \item{mplus_output}{Text containing model output.  This should be the text read from the file (not a file path).}
 }
 \value{
@@ -54,6 +59,8 @@ Functions that extract the values within model output files.
 \section{Functions}{
 \itemize{
 \item \code{extract_scalar_float}: Generalizable function to return a single numeric value.
+
+\item \code{extract_named_parameter}: Determine the estimate, standard error, z-score, and two-tailed p-value of an estimate.
 
 \item \code{extract_output_filename}: Determine the path of the Mplus output file.
 
