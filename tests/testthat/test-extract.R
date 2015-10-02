@@ -10,6 +10,11 @@ output_2 <- readr::read_file(path_2)
 output_3 <- readr::read_file(path_3)
 
 
+# MplusAutomation::extractModelSummaries(path_1)
+# MplusAutomation::extractModelParameters(path_1)
+
+
+
 snippet_fit_1 <- 
 "THE MODEL ESTIMATION TERMINATED NORMALLY
 MODEL FIT INFORMATION

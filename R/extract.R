@@ -72,7 +72,7 @@ extract_named_wald <- function( parameter_name, mplus_output ) {
 
 #' @export
 #' @describeIn extract Determine the path of the Mplus output file.
-extract_output_filename <- function( mplus_output, regex="\\s+DATA:\\s+File = (.+);.*" ) {
+extract_output_filename <- function( mplus_output, regex="\\bDATA:\\s+File = (.+);.*" ) {
   # Regex notes
   #   - Sometimes "File" is on the line below "DATA:"
   # gsub(pattern="DATA:  File = (.+);", replacement="\\1", mplus_output, perl=T)
@@ -81,19 +81,19 @@ extract_output_filename <- function( mplus_output, regex="\\s+DATA:\\s+File = (.
 
 #' @export
 #' @describeIn extract Determine the number of free parameters for the model estimation.
-extract_free_parameter_count <- function( mplus_output, regex="Number of Free Parameters\\s+(\\d{1,})\\s+") {
+extract_free_parameter_count <- function( mplus_output, regex="\\bNumber of Free Parameters\\s+(\\d{1,})\\b") {
   extract_scalar_float(regex, mplus_output)
 }
 
 #' @export
 #' @describeIn extract Determine the log likelihood for the model estimation.
-extract_loglikelihood <- function( mplus_output, regex="Loglikelihood\\s+H0 Value\\s+([-\\d\\.]+)\\s+" ) {
+extract_loglikelihood <- function( mplus_output, regex="\\bLoglikelihood\\s+H0 Value\\s+([-\\d\\.]+)\\b" ) {
   extract_scalar_float(regex, mplus_output)
 }
 
 #' @export
 #' @describeIn extract Determine the H0 Scaling Correction Factor for the model estimation.
-extract_scaling_correction <- function( mplus_output, regex="\\s+H0 Scaling Correction Factor\\s+([-\\d\\.]+)\\s+for MLR\\s+" ) {
+extract_scaling_correction <- function( mplus_output, regex="\\bH0 Scaling Correction Factor\\s+([-\\d\\.]+)\\s+for MLR\\b" ) {
   matched_string <- extract_scalar_string(regex, mplus_output)
   matched_float <- ifelse(length(matched_string>0), as.numeric(matched_string), NA_real_)
   
@@ -102,20 +102,18 @@ extract_scaling_correction <- function( mplus_output, regex="\\s+H0 Scaling Corr
 
 #' @export
 #' @describeIn extract Determine the AIC for the model estimation.
-extract_aic <- function( mplus_output, regex="Akaike \\(AIC\\)\\s+([-\\d\\.]+)\\s+" ) {
+extract_aic <- function( mplus_output, regex="\\bAkaike \\(AIC\\)\\s+([-\\d\\.]+)\\b" ) {
   extract_scalar_float(regex, mplus_output)
 }
 
 #' @export
 #' @describeIn extract Determine the BIC for the model estimation.
-extract_bic <- function( mplus_output, regex="Bayesian \\(BIC\\)\\s+([-\\d\\.]+)\\s+" ) {
+extract_bic <- function( mplus_output, regex="\\bBayesian \\(BIC\\)\\s+([-\\d\\.]+)\\b" ) {
   extract_scalar_float(regex, mplus_output)
 }
 
 #' @export
 #' @describeIn extract Determine the Sample-Size Adjusted BIC for the model estimation.
-extract_bic_adjusted <- function( mplus_output, regex="\\s+Sample-Size Adjusted BIC\\s+([-\\d\\.]+)\\s+" ) {
-  # regex = "\\s+Sample-Size Adjusted BIC\\s+(\\d+(\\.\\d+)?)\\s+"
-  # regex = "\\s+Sample-Size Adjusted BIC\\s+(.+)\\s+"
+extract_bic_adjusted <- function( mplus_output, regex="\\bSample-Size Adjusted BIC\\s+([-\\d\\.]+)\\b" ) {
   extract_scalar_float(regex, mplus_output)
 }
