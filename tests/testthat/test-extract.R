@@ -13,7 +13,31 @@ output_3 <- readr::read_file(path_3)
 # MplusAutomation::extractModelSummaries(path_1)
 # MplusAutomation::extractModelParameters(path_1)
 
+error_path <- base::file.path(devtools::inst(name="IalsaSynthesis"), "test_data/2015-portland/has_errors/b1_female_a_fev_mmse_5.out")
+# m <- MplusAutomation::readModels(error_path)
+# b1_female_a_fev_mmse_5.out
 
+# .  THIS MAY BE DUE TO THE STARTING\r\n     
+# VALUES BUT MAY ALSO BE AN INDICATION OF MODEL NONIDENTIFICATION.  THE\r\n     
+# CONDITION NUMBER IS       0.787D-10.  PROBLEM INVOLVING THE FOLLOWING PARAMETER:\r\n     
+# Parameter 24, R_RES_PC\r\n\r\n\r\nTHE MODEL ESTIMATION TERMINATED NORMALLY\r\n\r\n\r\n\r\nMODEL FIT INFORMATION\r\n\r\nNumber of Free Parameters 
+
+snippet <- readr::read_file(error_path)
+# snippet <- "TRUSTWORTHY FOR SOME PARAMETERS DUE TO A NON-POSITIVE DEFINITE\r\n     FIRST-ORDER DERIVATIVE PRODUCT MATRIX.  THIS MAY BE DUE TO THE STARTING\r\n     VALUES BUT MAY ALSO BE AN INDICATION OF MODEL NONIDENTIFICATION.  THE\r\n     CONDITION NUMBER IS       0.787D-10.  PROBLEM INVOLVING THE FOLLOWING PARAMETER:\r\n     Parameter 24, R_RES_PC\r\n\r\n\r\nTHE "
+# snippet <- "     Parameter 24, R_RES_PC"
+# gsub(".+THE STANDARD ERRORS OF THE MODEL PARAMETER ESTIMATES MAY NOT BE\r\n     TRUSTWORTHY FOR SOME PARAMETERS DUE TO A NON-POSITIVE DEFINITE\r\n     FIRST-ORDER DERIVATIVE PRODUCT MATRIX\\.  THIS MAY BE DUE TO THE STARTING\r\n     VALUES BUT MAY ALSO BE AN INDICATION OF MODEL NONIDENTIFICATION\\.  THE\r\n     CONDITION NUMBER IS\\s+(.+?)\\.  PROBLEM INVOLVING THE FOLLOWING PARAMETER:\r\n     Parameter (\\d+), ([\\w_]+).+",
+# gsub("(?s).+Parameter (\\d{2}), ([\\w_]+).*", "\\2", snippet, perl=TRUE)
+gsub("(?s).+THE STANDARD ERRORS OF THE MODEL PARAMETER ESTIMATES MAY NOT BE\r\n     TRUSTWORTHY FOR SOME PARAMETERS DUE TO A NON-POSITIVE DEFINITE\r\n     FIRST-ORDER DERIVATIVE PRODUCT MATRIX\\.  THIS MAY BE DUE TO THE STARTING\r\n     VALUES BUT MAY ALSO BE AN INDICATION OF MODEL NONIDENTIFICATION\\.  THE\r\n     CONDITION NUMBER IS\\s+(.+?)\\.  PROBLEM INVOLVING THE FOLLOWING PARAMETER:\r\n     Parameter (\\d+), ([\\w_]+).+", "\\3: \\2 & \\1", snippet, perl=TRUE);
+
+snippet <- "1998-2014 Muthen & Muthen"
+gsub("19(\\d{2})-.+", "\\1", snippet, perl=TRUE)
+
+
+txt <- "a test of capitalizing"
+gsub("(\\w)(\\w*)", "\\1", txt, perl=TRUE)
+
+
+# m$warnings
 
 snippet_fit_1 <- 
 "THE MODEL ESTIMATION TERMINATED NORMALLY
