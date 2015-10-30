@@ -1,7 +1,6 @@
 #' @name validate
 #' @aliases validate_filename_output
 #' @export
-#' 
 #' @title Functions that check the validty of values throughout the workflow.
 #'  
 #' @description These functions help identify mistakes in formatting before the create difficult-to-diagnose problems later.
