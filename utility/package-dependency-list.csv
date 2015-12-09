@@ -1,4 +1,4 @@
-PackageName,OnCran,Install,GitHubUsername,Description
+package_name,on_cran,install,github_username,description
 colorspace,TRUE,TRUE,,Explicit control over the HCL color scheme
 devtools,TRUE,TRUE,,Used in the C1 survival for sourcing gists
 evaluate,TRUE,TRUE,,A package that Hadley et al use a lot in their packages.  It helps when things are passed by reference.
@@ -16,4 +16,3 @@ testit,TRUE,TRUE,,has the useful `assert()` function
 testthat,FALSE,TRUE,hadley,Heavier testing framework that's good for package development
 xtable,TRUE,TRUE,,"Formats tables, especially for LaTeX output."
 yaml,TRUE,TRUE,,"Needed for knitr and reports."
-
