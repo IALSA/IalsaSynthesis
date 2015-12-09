@@ -7,7 +7,7 @@ ggthemes,TRUE,TRUE,,"Extra themes, scales and geoms for ggplot"
 googleVis,TRUE,TRUE,,"JavaScript-based visualizations, like scrollable tables"
 ggmap,TRUE,TRUE,,"Maps & graphics, based on ggplot"
 knitr,TRUE,TRUE,,For reporting
-lme4,TRUE,TRUE,,Multilevel models
+lme4,TRUE,FALSE,,Multilevel models
 lubridate,TRUE,TRUE,,Consistent/convenient function signatures for manipulating dates
 roxygen2,FALSE,FALSE,klutometis,Creates documentation Rd file from (well-formed) comments
 rmarkdown,FALSE,TRUE,rstudio,"Needed for knitr and reports."
