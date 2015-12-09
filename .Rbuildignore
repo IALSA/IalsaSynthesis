@@ -11,7 +11,7 @@
 ^cran-comments\.md$
 README.html$
 
-^documentation_peek.pdf
+^documentation-peek.pdf
 ^documentation_for_developers/
 ^libs/
 ^playgrounds/

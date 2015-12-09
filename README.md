@@ -43,7 +43,7 @@ install.packages("devtools") #If it's not already installed.
 devtools::install_github(repo="IALSA/IalsaSynthesis")
 ```
 
-The package documentation for the [development version](documentation_peek.pdf) on GitHub can be viewed without installing the package.
+The package documentation for the [development version](documentation-peek.pdf) on GitHub can be viewed without installing the package.
 
 ### Collaborative Development
 Consistent with IALSA goals, we encourage input and collaboration from the overall community.  If you're familar with GitHub and R packages, feel free to submit a [pull request](https://github.com/IALSA/IalsaSynthesis/pulls).  If you'd like to report a bug or make a suggestion, please create a GitHub [issue](https://github.com/IALSA/IalsaSynthesis/issues); issues are a usually a good place to ask public questions too.  However, feel free to email Andrey or Will privately (<andkov@uvic.ca> or <wibeasley@hotmail.com>).
