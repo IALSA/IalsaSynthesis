@@ -12,7 +12,7 @@ IalsaSynthesis
 
 An [R](http://www.r-project.org/) package for synthesizing information across collaborating research.
 
-[![logo](libs/images/ialsa_wide.png)](http://www.ialsa.org/)
+[![logo](libs/images/ialsa-wide.png)](http://www.ialsa.org/)
 
 [IALSA](http://www.ialsa.org/) (Integrative Analysis of Longitudinal Studies of Aging) research network unites approximately 100 longtidinal studies from all over the world.  IALSA makes primary use of a [coordinated analysis approach](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2773828/) and various [harmonization methods](https://www.maelstrom-research.org/repository/methods_library). Our projects involve dealing with multiple longitudinal studies, each of which may count numerous statistical models, making the synthesis of results particularly arduous. The `IalsaSynthesis` package offers software tools for extracting, pooling, evaluating, and reporting the results of a large number of statistical models. See out [flagship project](https://github.com/IALSA/IALSA-2015-Portland), stemming from coordinated analysis workshop in Portland in February of 2015.
 
