@@ -27,7 +27,7 @@ An [R](http://www.r-project.org/) package for synthesizing information across co
 
 | [CRAN](http://cran.rstudio.com/) | [Version](https://cran.r-project.org/package=IalsaSynthesis) | [Rate](http://cranlogs.r-pkg.org/) | [Zenodo](https://zenodo.org/search?ln=en&p=ialsasynthesis) | 
 |  :---- | :----: | :----: | :----: |
-| [Latest](https://cran.r-project.org/package=IalsaSynthesis) | [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/IalsaSynthesis)](https://cran.r-project.org/package=IalsaSynthesis) | ![CRANPace](http://cranlogs.r-pkg.org/badges/IalsaSynthesis) | [![DOI](https://zenodo.org/badge/4971/IALSA/IalsaSynthesis.svg)](https://zenodo.org/badge/latestdoi/4971/IALSA/IalsaSynthesis) |
+| [Latest](https://cran.r-project.org/package=IalsaSynthesis) | [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/IalsaSynthesis)](https://cran.r-project.org/package=IalsaSynthesis) | ![CRANPace](http://cranlogs.r-pkg.org/badges/IalsaSynthesis) |  [![DOI](https://zenodo.org/badge/34798650.svg)](https://zenodo.org/badge/latestdoi/34798650) |
 |   | *Latest CRAN version* | *CRAN Downloads* | *Independently-hosted Archive* |
 
 The released CRAN version of IalsaSynthesis can be installed through R. (The *release* version will be available on [CRAN](http://cran.rstudio.com/) closer to the Gothenburg conference.)
