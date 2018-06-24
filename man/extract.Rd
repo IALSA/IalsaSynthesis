@@ -2,16 +2,16 @@
 % Please edit documentation in R/extract.R
 \name{extract}
 \alias{extract}
+\alias{extract_scalar_string}
+\alias{extract_scalar_float}
+\alias{extract_named_wald}
+\alias{extract_output_filename}
+\alias{extract_free_parameter_count}
+\alias{extract_loglikelihood}
+\alias{extract_scaling_correction}
 \alias{extract_aic}
 \alias{extract_bic}
 \alias{extract_bic_adjusted}
-\alias{extract_free_parameter_count}
-\alias{extract_loglikelihood}
-\alias{extract_named_wald}
-\alias{extract_output_filename}
-\alias{extract_scalar_float}
-\alias{extract_scalar_string}
-\alias{extract_scaling_correction}
 \title{Extract the values within model output files.}
 \usage{
 extract_scalar_string(regex, source)
@@ -76,10 +76,10 @@ Functions that extract the values within model output files.
 
 \item \code{extract_bic_adjusted}: Determine the Sample-Size Adjusted BIC for the model estimation.
 }}
+
 \examples{
 library(IalsaSynthesis) #Load the package into the current R session.
 }
 \author{
 Will Beasley
 }
-

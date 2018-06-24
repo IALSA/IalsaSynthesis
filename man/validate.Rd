@@ -37,4 +37,3 @@ validate_filename_output(bad_name, path)
 \author{
 Will Beasley
 }
-
