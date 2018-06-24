@@ -18,7 +18,7 @@ An [R](http://www.r-project.org/) package for synthesizing information across co
 
 ### Package Crew
 
-[Will Beasley](https://www.researchgate.net/profile/William_Beasley2) (*[University of Oklahoma Health Sciences Center](http://ouhsc.edu/), [Department of Pediatrics](http://www.oumedicine.com/pediatrics), [Biomedical & Behavioral Research Core](http://ouhsc.edu/BBMC/)*)
+[Will Beasley](https://www.researchgate.net/profile/William_Beasley2) (*[University of Oklahoma Health Sciences Center](https://ouhsc.edu/), [Department of Pediatrics](https://www.oumedicine.com/department-of-pediatrics), [Biomedical & Behavioral Research Core](http://ouhsc.edu/BBMC/)*)
 
 [Andrey Koval](https://www.researchgate.net/profile/Andrey_Koval) (*[University of Victoria](http://www.uvic.ca/), [Department of Psychology](http://www.uvic.ca/socialsciences/psychology/)*).
 
@@ -30,7 +30,7 @@ An [R](http://www.r-project.org/) package for synthesizing information across co
 | [Latest](https://cran.r-project.org/package=IalsaSynthesis) | [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/IalsaSynthesis)](https://cran.r-project.org/package=IalsaSynthesis) | ![CRANPace](http://cranlogs.r-pkg.org/badges/IalsaSynthesis) |  [![DOI](https://zenodo.org/badge/34798650.svg)](https://zenodo.org/badge/latestdoi/34798650) |
 |   | *Latest CRAN version* | *CRAN Downloads* | *Independently-hosted Archive* |
 
-The released CRAN version of IalsaSynthesis can be installed through R. (The *release* version will be available on [CRAN](http://cran.rstudio.com/) closer to the Gothenburg conference.)
+The released CRAN version of IalsaSynthesis can be installed through R. (The *release* version will be available on [CRAN](https://cran.rstudio.com/) closer to the Gothenburg conference.)
 
 ```R
 install.packages("IalsaSynthesis")
@@ -49,7 +49,7 @@ The package documentation for the [development version](documentation-peek.pdf) 
 Consistent with IALSA goals, we encourage input and collaboration from the overall community.  If you're familar with GitHub and R packages, feel free to submit a [pull request](https://github.com/IALSA/IalsaSynthesis/pulls).  If you'd like to report a bug or make a suggestion, please create a GitHub [issue](https://github.com/IALSA/IalsaSynthesis/issues); issues are a usually a good place to ask public questions too.  However, feel free to email Andrey or Will privately (<andkov@uvic.ca> or <wibeasley@hotmail.com>).
 
 ### Thanks to Funders
-IALSA is funded through an NIH/NIA Program Project Grant ([P01AG043362](http://projectreporter.nih.gov/project_info_description.cfm?aid=8414933&icde=18870651&ddparam=&ddvalue=&ddsub=&cr=3&csb=default&cs=ASC); 2013-2018) to Oregon Health & Science University (Program Directors: [Scott Hofer](https://www.maelstrom-research.org/mica/network/ialsa#/users/hofer), [Andrea Piccinin](https://www.maelstrom-research.org/mica/network/ialsa#/users/piccinin), [Jeffrey Kaye](https://www.maelstrom-research.org/mica/network/ialsa#/users/kaye), and [Diana Kuh](https://www.maelstrom-research.org/mica/network/ialsa#/users/kuh)) and previously funded by NIH/NIA ([R01AG026453](http://projectreporter.nih.gov/project_info_description.cfm?aid=7210005&icde=19139556&ddparam=&ddvalue=&ddsub=&cr=5&csb=default&cs=ASC); 2007-2013) and CIHR (103284; 2010-2013).
+IALSA is funded through an NIH/NIA Program Project Grant ([P01AG043362](https://projectreporter.nih.gov/project_info_description.cfm?aid=8414933&icde=18870651&ddparam=&ddvalue=&ddsub=&cr=3&csb=default&cs=ASC); 2013-2018) to Oregon Health & Science University (Program Directors: [Scott Hofer](https://www.maelstrom-research.org/mica/network/ialsa#/users/hofer), [Andrea Piccinin](https://www.maelstrom-research.org/mica/network/ialsa#/users/piccinin), [Jeffrey Kaye](https://www.maelstrom-research.org/mica/network/ialsa#/users/kaye), and [Diana Kuh](https://www.maelstrom-research.org/mica/network/ialsa#/users/kuh)) and previously funded by NIH/NIA ([R01AG026453](https://projectreporter.nih.gov/project_info_description.cfm?aid=7210005&icde=19139556&ddparam=&ddvalue=&ddsub=&cr=5&csb=default&cs=ASC); 2007-2013) and CIHR (103284; 2010-2013).
 
 ### Code Coverage Over Time
 
