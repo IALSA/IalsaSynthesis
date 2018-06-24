@@ -5,7 +5,7 @@
 \alias{IalsaSynthesis-package}
 \title{Synthesizing Information Across Collaborating Research}
 \description{
-Synthesizing information across collaborating research. Created for \href{http://www.ialsa.org/}{Integrative Analysis of Longitudinal Studies of Aging} (IALSA).
+Synthesizing information across collaborating research. Created for \href{https://www.maelstrom-research.org/mica/network/ialsa#/}{Integrative Analysis of Longitudinal Studies of Aging} (IALSA).
 }
 \note{
 The release version will be available through \href{https://cran.r-project.org/package=IalsaSynthesis}{CRAN}.

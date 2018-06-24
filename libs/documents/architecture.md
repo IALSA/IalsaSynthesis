@@ -1,5 +1,5 @@
 ---
-title: Proposed Architecture of Synthesis Ecosystem for [IALSA](http://www.ialsa.org/)
+title: Proposed Architecture of Synthesis Ecosystem for [IALSA](https://www.maelstrom-research.org/mica/network/ialsa#/)
 date: 2015-05-21
 output:
   html_document:

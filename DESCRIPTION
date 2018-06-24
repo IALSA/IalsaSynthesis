@@ -11,7 +11,7 @@ Author: Will Beasley [aut, cre],
     Andrey Koval [aut],
     Integrative Analysis of Longitudinal Studies of Aging (IALSA) [cph]
 Maintainer: Will Beasley <wibeasley@hotmail.com>
-URL: https://github.com/IALSA/IalsaSynthesis, http://www.ialsa.org/
+URL: https://github.com/IALSA/IalsaSynthesis, https://www.maelstrom-research.org/mica/network/ialsa#/
 BugReports: https://github.com/IALSA/IalsaSynthesis/issues
 Depends:
     R(>= 3.0.0),
