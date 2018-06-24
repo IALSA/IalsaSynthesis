@@ -17,15 +17,15 @@
 #' IALSA is funded through an NIH/NIA Program Project Grant (
 #' \href{http://projectreporter.nih.gov/project_info_description.cfm?aid=8414933&icde=18870651&ddparam=&ddvalue=&ddsub=&cr=3&csb=default&cs=ASC}{P01AG043362}); 2013-2018) to Oregon Health & Science University 
 #' (Program Directors: 
-#' \href{http://www.ialsa.org/users/hofer}{Scott Hofer}, 
-#' \href{http://www.ialsa.org/users/piccinin}{Andrea Piccinin}, 
-#' \href{http://www.ialsa.org/users/kaye}{Jeffrey Kaye}, and 
-#' \href{http://www.ialsa.org/users/kuh}{Diana Kuh})
+#' \href{https://www.maelstrom-research.org/mica/network/ialsa#/}{Scott Hofer}, 
+#' \href{https://www.maelstrom-research.org/mica/network/ialsa#/}{Andrea Piccinin}, 
+#' \href{https://www.maelstrom-research.org/mica/network/ialsa#/}{Jeffrey Kaye}, and 
+#' \href{https://www.maelstrom-research.org/mica/individual-study/mrc-nshd#/}{Diana Kuh})
 #' and previously funded by NIH/NIA (\href{http://projectreporter.nih.gov/project_info_description.cfm?aid=7210005&icde=19139556&ddparam=&ddvalue=&ddsub=&cr=5&csb=default&cs=ASC}{R01AG026453}; 2007-2013) and CIHR (103284; 2010-2013).
 #' 
 #' @author 
 #'  \href{http://scholar.google.com/citations?user=ffsJTC0AAAAJ}{William Howard Beasley} 
-#'  --Assistant Professor of Research, \href{http://find.ouhsc.edu/Faculty.aspx?FacultyID=1064}{University of Oklahoma Health Sciences Center}, 
+#'  --Associate Professor of Research, \href{http://find.ouhsc.edu/Faculty.aspx?FacultyID=1064}{University of Oklahoma Health Sciences Center}, 
 #'  \href{http://www.oumedicine.com/pediatrics}{Dept of Pediatrics}, Biomedical and Behavioral Methodology Core (\href{http://ouhsc.edu/bbmc/}{BBMC})
 #'  
 #'  
