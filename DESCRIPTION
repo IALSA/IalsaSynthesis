@@ -8,10 +8,6 @@ Authors@R: c(person("Will", "Beasley", email="wibeasley@hotmail.com", role=c("au
       comment = c(ORCID = "0000-0002-5613-5006")),
     person("Andrey", "Koval", email="andkov@uvic.ca", role = c("aut")),
     person(given="Integrative Analysis of Longitudinal Studies of Aging (IALSA)", role = c("cph")))
-Author: Will Beasley [aut, cre],
-    Andrey Koval [aut],
-    Integrative Analysis of Longitudinal Studies of Aging (IALSA) [cph]
-Maintainer: Will Beasley <wibeasley@hotmail.com>
 URL: https://github.com/IALSA/IalsaSynthesis, https://www.maelstrom-research.org/mica/network/ialsa#/
 BugReports: https://github.com/IALSA/IalsaSynthesis/issues
 Depends:
