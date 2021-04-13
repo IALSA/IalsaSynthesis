@@ -2,9 +2,9 @@ library(testthat)
 
 context("Extract")
 
-path_1 <- base::file.path(devtools::inst(name="IalsaSynthesis"), "test-data/2015-portland/b1_female_a_grip_categories_4.out")
-path_2 <- base::file.path(devtools::inst(name="IalsaSynthesis"), "test-data/2015-portland/b1_female_aehplus_gait_grip.out")
-path_3 <- base::file.path(devtools::inst(name="IalsaSynthesis"), "test-data/2015-portland/b1_female_aehplus_grip_gait.out")
+path_1 <- system.file(package="IalsaSynthesis", "test-data/2015-portland/b1_female_a_grip_categories_4.out")
+path_2 <- system.file(package="IalsaSynthesis", "test-data/2015-portland/b1_female_aehplus_gait_grip.out")
+path_3 <- system.file(package="IalsaSynthesis", "test-data/2015-portland/b1_female_aehplus_grip_gait.out")
 output_1 <- readr::read_file(path_1)
 output_2 <- readr::read_file(path_2)
 output_3 <- readr::read_file(path_3)
@@ -13,7 +13,7 @@ output_3 <- readr::read_file(path_3)
 # MplusAutomation::extractModelSummaries(path_1)
 # MplusAutomation::extractModelParameters(path_1)
 
-error_path <- base::file.path(devtools::inst(name="IalsaSynthesis"), "test-data/2015-portland/has-errors/b1_female_a_fev_mmse_5.out")
+error_path <- system.file(package="IalsaSynthesis", "test-data/2015-portland/has-errors/b1_female_a_fev_mmse_5.out")
 # m <- MplusAutomation::readModels(error_path)
 # b1_female_a_fev_mmse_5.out
 
