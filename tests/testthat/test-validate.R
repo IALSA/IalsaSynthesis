@@ -1,8 +1,5 @@
 library(testthat)
 
-context("Validate")
-
-
 test_that("validate_filename_output -good", {   
   path <- system.file(package="IalsaSynthesis", "test-data/2015-portland")
   

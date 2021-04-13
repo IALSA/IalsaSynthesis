@@ -1,7 +1,5 @@
 library(testthat)
 
-context("Extract")
-
 path_1 <- system.file(package="IalsaSynthesis", "test-data/2015-portland/b1_female_a_grip_categories_4.out")
 path_2 <- system.file(package="IalsaSynthesis", "test-data/2015-portland/b1_female_aehplus_gait_grip.out")
 path_3 <- system.file(package="IalsaSynthesis", "test-data/2015-portland/b1_female_aehplus_grip_gait.out")

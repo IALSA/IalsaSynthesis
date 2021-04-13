@@ -22,4 +22,6 @@ Suggests:
     testthat (>= 2.0)
 License: GPL-2
 LazyData: TRUE
+Encoding: UTF-8
 RoxygenNote: 7.1.1
+Config/testthat/edition: 3
