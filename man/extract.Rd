@@ -20,26 +20,37 @@ extract_scalar_float(regex, source)
 
 extract_named_wald(parameter_name, mplus_output)
 
-extract_output_filename(mplus_output,
-  regex = "\\\\bDATA:\\\\s+File = (.+);.*")
+extract_output_filename(mplus_output, regex = "\\\\bDATA:\\\\s+File = (.+);.*")
 
-extract_free_parameter_count(mplus_output,
-  regex = "\\\\bNumber of Free Parameters\\\\s+(\\\\d{1,})\\\\b")
+extract_free_parameter_count(
+  mplus_output,
+  regex = "\\\\bNumber of Free Parameters\\\\s+(\\\\d{1,})\\\\b"
+)
 
-extract_loglikelihood(mplus_output,
-  regex = "\\\\bLoglikelihood\\\\s+H0 Value\\\\s+([-\\\\d\\\\.]+)\\\\b")
+extract_loglikelihood(
+  mplus_output,
+  regex = "\\\\bLoglikelihood\\\\s+H0 Value\\\\s+([-\\\\d\\\\.]+)\\\\b"
+)
 
-extract_scaling_correction(mplus_output,
-  regex = "\\\\bH0 Scaling Correction Factor\\\\s+([-\\\\d\\\\.]+)\\\\s+for MLR\\\\b")
+extract_scaling_correction(
+  mplus_output,
+  regex = "\\\\bH0 Scaling Correction Factor\\\\s+([-\\\\d\\\\.]+)\\\\s+for MLR\\\\b"
+)
 
-extract_aic(mplus_output,
-  regex = "\\\\bAkaike \\\\(AIC\\\\)\\\\s+([-\\\\d\\\\.]+)\\\\b")
+extract_aic(
+  mplus_output,
+  regex = "\\\\bAkaike \\\\(AIC\\\\)\\\\s+([-\\\\d\\\\.]+)\\\\b"
+)
 
-extract_bic(mplus_output,
-  regex = "\\\\bBayesian \\\\(BIC\\\\)\\\\s+([-\\\\d\\\\.]+)\\\\b")
+extract_bic(
+  mplus_output,
+  regex = "\\\\bBayesian \\\\(BIC\\\\)\\\\s+([-\\\\d\\\\.]+)\\\\b"
+)
 
-extract_bic_adjusted(mplus_output,
-  regex = "\\\\bSample-Size Adjusted BIC\\\\s+([-\\\\d\\\\.]+)\\\\b")
+extract_bic_adjusted(
+  mplus_output,
+  regex = "\\\\bSample-Size Adjusted BIC\\\\s+([-\\\\d\\\\.]+)\\\\b"
+)
 }
 \arguments{
 \item{regex}{Regular Expression pattern to capture and extract contents.}

@@ -5,8 +5,12 @@
 \alias{validate_filename_output}
 \title{Functions that check the validty of values throughout the workflow.}
 \usage{
-validate_filename_output(filename, path, file_extension_expected = "out",
-  underscore_count_expected = 4L)
+validate_filename_output(
+  filename,
+  path,
+  file_extension_expected = "out",
+  underscore_count_expected = 4L
+)
 }
 \arguments{
 \item{filename}{The name of the file to be validated.}
