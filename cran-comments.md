@@ -7,7 +7,7 @@ Please tell me if there's something else I should do for CRAN.  -Will Beasley
 * Local Ubuntu, R 4.0.5
 * Local Windows, R 4.0.4 patched
 * win-builder (version="R-devel"); <not responding>
-* Travis CI, Ubuntu LTS; https://travis-ci.org/IALSA/IalsaSynthesis/builds
+* Travis CI, Ubuntu LTS; https://travis-ci.com/IALSA/IalsaSynthesis/builds
 * AppVeyor, Windows Server; https://ci.appveyor.com/project/wibeasley/ialsasynthesis/history
 * R-hub (https://builder.r-hub.io/status/IalsaSynthesis_0.2.0.tar.gz-6de26f7bcd3e4d3d9b5a3d2bbfa09905)
 
