@@ -1,5 +1,5 @@
 ---
-title: Proposed Architecture of Synthesis Ecosystem for [IALSA](https://www.maelstrom-research.org/mica/network/ialsa#/)
+title: Proposed Architecture of Synthesis Ecosystem for [IALSA](https://www.ialsa.org/)
 date: 2015-05-21
 output:
   html_document:
@@ -87,7 +87,7 @@ These reports also ideally
 #### A2 Reports: Overall Conference Progress
 Whereas an A1 report displays only one study at a time, an A2 tracks the progress of all participants.  The hope is that this continually-updated material (possibly shown on an overhead projector) emphasizes the collective goals of the conference, and therefore increase the sense of camaraderie.  By showing which studies are on each stage, we hope that the leaders are more willing to help those behind, and those behind are more likely to ask for help from the leaders.  
 
-UVic staff can more quickly identify who needs assistance, and decide whether to help them directly, or suggest one of the leading participants help them.  This type of collaboration is championed by [Jim Mold](https://find.ouhsc.edu/Faculty.aspx?FacultyID=363) (who was a big influence on the way the [BBMC](http://www.ouhsc.edu/bbmc/) operates its research investigations and QA projects).  One of the basic ideas is that even high-performing nurses/providers can learn better techniques from inexperienced and low-performing ones, if the environment is collaborative and safe.  It sounds like IALSA already posses strong cohesion, and the A2 reports will be designed to increase the members' awareness of who needs help, and who can provide help.
+UVic staff can more quickly identify who needs assistance, and decide whether to help them directly, or suggest one of the leading participants help them.  This type of collaboration is championed by [Jim Mold](https://medicine.ouhsc.edu/Academic-Departments/Family-and-Preventive-Medicine/Faculty/jim-mold-mph-md) (who was a big influence on the way the [BBMC](http://www.ouhsc.edu/bbmc/) operates its research investigations and QA projects).  One of the basic ideas is that even high-performing nurses/providers can learn better techniques from inexperienced and low-performing ones, if the environment is collaborative and safe.  It sounds like IALSA already posses strong cohesion, and the A2 reports will be designed to increase the members' awareness of who needs help, and who can provide help.
 
 
 #### B1 Reports: Single Study Analysis
