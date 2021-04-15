@@ -1,5 +1,8 @@
 ## Description
-This submission has some minor modifications to comply with updated CRAN checks and package dependencies
+This submission has some minor modifications to comply with updated CRAN checks and package dependencies.
+
+This is a second submission because last night's submission's README referred to a file that didn't exist.  
+The file was replaced and the link again works.
 
 Please tell me if there's something else I should do for CRAN.  -Will Beasley
 
