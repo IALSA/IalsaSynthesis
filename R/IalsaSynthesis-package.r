@@ -10,7 +10,7 @@
 #' Please see the installation examples below.
 #'
 #' If you're having trouble with the package, please install the development version.  If this doesn't solve
-#' your problem, please create a \href{https://github.com/IALSA/IalsaSynthesis/issues}{new issue}, or email Will or Andrey.
+#' your problem, please create a \href{https://github.com/IALSA/IalsaSynthesis/issues}{new issue}, or email Will or Andriy.
 #'
 #' @references
 #'
@@ -28,7 +28,7 @@
 #'  \href{https://medicine.ouhsc.edu/Academic-Departments/Pediatrics}{Dept of Pediatrics}, Biomedical and Behavioral Methodology Core (\href{https://www.ouhsc.edu/bbmc/}{BBMC})
 #'
 #'
-#'  \href{https://www.researchgate.net/profile/Andriy-Koval-2}{Andrey Koval}
+#'  \href{https://www.researchgate.net/profile/Andriy-Koval-2}{Andriy Koval}
 #'  --Post Doc, \href{http://www.uvic.ca/}{University of Victoria}, \href{http://www.uvic.ca/socialsciences/psychology/}{Department of Psychology}
 #'
 #' @examples
