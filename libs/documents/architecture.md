@@ -15,7 +15,7 @@ Before the conference starts, each participating study completes a online survey
 
 For instance, assume the upcoming Tehran conference focused on the bivariate relationship between each cognitive and physical variable.  If study ABBA declared they collected three cognitive and four physical variables, the resulting skeleton would consist of 12 rows, each corresponding to a bivariate model.  Each conference will have different goals, so each pre-conference survey will be different, and the survey responses will be combined differently to produce an appropriate Catalog.
 
-As Andrey observed, it may not be feasible for 'wide' studies to combine everything, and the Catalog list should prioritize the more important models to be estimated.  The current plan is to emphasize models that are addressable by the largest number of studies.  From IALSA's perspective, it's better to have the one model informed by six studies, than three models informed by two studies a piece.  Based on feedback from participants, additional criteria might influence the prioritization.
+As Andriy observed, it may not be feasible for 'wide' studies to combine everything, and the Catalog list should prioritize the more important models to be estimated.  The current plan is to emphasize models that are addressable by the largest number of studies.  From IALSA's perspective, it's better to have the one model informed by six studies, than three models informed by two studies a piece.  Based on feedback from participants, additional criteria might influence the prioritization.
 
 *Details*
 
@@ -36,7 +36,7 @@ IalsaSynthesis R Package
 
 The [`IalsaSynthesis`](https://github.com/IALSA/IalsaSynthesis) R package will provide functions run by participants on their own computers, and will be used across multiple conferences and workshops.  The functions we develop and distribute will help us keep IALSA participants using similar functions across many years, even as the list of functions is modified and grown.  Participants will be able to update to the latest package by running one line of code (`devtools::install_github('IALSA/IalsaSynthesis')`).
 
-The R package will contain only sample data; real data belongs in the conference-specific repositories.  It will be developed primarily by UVic employees and collaborators (eg, Will & Andrey), but contributions are welcomed from anyone using  GitHub [pull requests](https://github.com/IALSA/IalsaSynthesis/pulls?utf8=%E2%9C%93&q=is%3Apr+).  For the sake of reproducibility, all IALSA reports include the "Session Info", which document the specific version of each package used in the report, including `IalsaSynethesis`.
+The R package will contain only sample data; real data belongs in the conference-specific repositories.  It will be developed primarily by UVic employees and collaborators (eg, Will & Andriy), but contributions are welcomed from anyone using  GitHub [pull requests](https://github.com/IALSA/IalsaSynthesis/pulls?utf8=%E2%9C%93&q=is%3Apr+).  For the sake of reproducibility, all IALSA reports include the "Session Info", which document the specific version of each package used in the report, including `IalsaSynethesis`.
 
 The boundaries are still being worked out between the `IalsaSynthesis` package and the conference-specific repositories.  The types of functionality likely provided by the R package include:
 
@@ -53,7 +53,7 @@ Model output files should be stored centrally for at least two reasons.  From a 
 
 The output files to be parsed on the participant's computer, via the `IalsaSynthesis` package.  For the sake of redundancy, the client will upload both the (a) extracted coefficients into specific Catalog fields, and the (b) entire output file into a large text field.  The ultimate goal is for the `IalsaSynthesis` package to upload everything, and the participant never goes to the REDCap web browser.  However we'll always offer the option to manually enter values (through the web browser) in case the parsing routines have trouble with an output file.
 
-If this automation is too brittle initially, we'll revert back to the Portland 2015 approach.  Participants will upload the output files to Dropbox or some file server.  The UVic team (eg, Will, Andrey, ...) will execute the parsing routines to extract the results.  Either way, we have an manual override.
+If this automation is too brittle initially, we'll revert back to the Portland 2015 approach.  Participants will upload the output files to Dropbox or some file server.  The UVic team (eg, Will, Andriy, ...) will execute the parsing routines to extract the results.  Either way, we have an manual override.
 
 
 Conference/Project Specific Repositories, (eg Ialsa-2015-Portland repo)
